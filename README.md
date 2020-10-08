@@ -1,5 +1,5 @@
 <h1 align="center">
-    telekom pxt-ki-in-schulen$
+    telekom ki-in-schulen
 </h1>
 
 <p align="center">
@@ -49,7 +49,7 @@ The following channels are available for discussions, feedback, and support requ
 
 | Type                     | Channel                                                |
 | ------------------------ | ------------------------------------------------------ |
-| **Issues**   | <a href="https://github.com/telekom/pxt-ki-in-schulen$/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/github/issues/telekom/pxt-ki-in-schulen$?style=flat-square"></a> </a>   |
+| **Issues**   | <a href="https://github.com/telekom/ki-in-schulen$/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/github/issues/telekom/ki-in-schulen$?style=flat-square"></a> </a>   |
 | **Other Requests**    | <a href="mailto:opensource@telekom.de" title="Email Open Source Team"><img src="https://img.shields.io/badge/email-Open%20Source%20Team-green?logo=mail.ru&style=flat-square&logoColor=white"></a>   |
 
 ## How to Contribute
