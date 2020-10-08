@@ -18,12 +18,6 @@ By initializing your repository the TOSCom has generated some useful documents. 
   - If you are going to use it, please replace the contact address ``opensource@telekom.de`` with your own address.
 * **LICENSE**: The license text of and for your project.
   - _YOU MAY NOT DELETE THIS FILE!_
-* **NOTICE**: the Apache v2 specific file to communicate with the recipients of your source code/repository.
-  - _YOU MAY NOT DELETE THIS FILE!_
-  - Complete the list of contributors with your main contributors.
-  - Insert a name if the respective person has gained copyrights (has done more than only correcting typos).
-  - Add everything you want to make known to your recipients.
-  - The Apache v2 license requires the recipients to handover / present this file NOTICE also to the 3rd party recipients.
 * **README.md**: the general project description file.
   -  _YOU MAY NOT DELETE THIS FILE!_
   - _YOU MAY NOT DELETE THE LICENSING STATEMENT AT THE END OF THE FILE!_
