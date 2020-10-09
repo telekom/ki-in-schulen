@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://github.com/telekom/pxt-ki-in-schulen/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/telekom/pxt-ki-in-schulen?style=flat"></a>
     <a href="https://github.com/telekom/pxt-ki-in-schulen/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/telekom/pxt-ki-in-schulen?style=flat"></a>
-    <a href="https://github.com/telekom/pxt-ki-in-schulen/blob/master/LICENSE" title="License"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg?style=flat"></a>
+    <a href="https://github.com/telekom/pxt-ki-in-schulen/blob/master/LICENSE" title="License"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat"></a>
 </p>
 
 <p align="center">
