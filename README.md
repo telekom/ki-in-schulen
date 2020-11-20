@@ -64,6 +64,8 @@ Our commitment to open source means that we are enabling -in fact encouraging- a
 
 Copyright (c) 2020 Deutsche Telekom AG.
 
+xyz files are licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de).
+
 Licensed under the **MIT License** (the "License"); you may not use this file except in compliance with the License.
 
 You may obtain a copy of the License by reviewing the file [LICENSE](./LICENSE) in the repository.
