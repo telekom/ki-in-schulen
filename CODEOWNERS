@@ -5,4 +5,7 @@
 # For more details, read the following article on GitHub: https://help.github.com/articles/about-codeowners/.
 
 # These are the default owners for the whole content of this repository. The default owners are automatically added as reviewers when you open a pull request, unless different owners are specified in the file.
-* @kreincke 
+* @c-a-schiller
+* @ferenc-hechler
+* @jelli123
+* @Wolle0971
