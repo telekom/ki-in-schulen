@@ -28,7 +28,7 @@ Die heutige digitale Jugend - eigenes Smartphone schon mit 10 Jahren oder gar fr
 
 ### KI-Leitlinien der Deutschen telekom
 
-Künstliche Intelligenz (KI) braucht einen Rahmen. Mit unseren neun selbst-bindenden Leitlinien haben wir diesen Rahmen definiert. https://www.telekom.com/de/konzern/digitale-verantwortung/details/ki-leitlinien-der-telekom-523904
+Künstliche Intelligenz (KI) braucht einen Rahmen. Mit unseren [neun selbst-bindenden Leitlinien](https://www.telekom.com/de/konzern/digitale-verantwortung/details/ki-leitlinien-der-telekom-523904) haben wir diesen Rahmen definiert.
 
 Sie beschreiben, wie wir als Deutsche Telekom mit KI umgehen wollen und wie wir unsere auf KI basierenden Produkte und Services künftig entwickeln. Der Grundgedanke ist, dass KI erstmal nur ein Werkzeug und an sich neutral ist. Es liegt also an uns, sie positiv einzusetzen ohne dabei die Risiken auszublenden und verantwortungsbewusst mit diesen umzugehen.
 
@@ -38,7 +38,7 @@ Das Projekt AI@School läuft unter __Leitlinie 9 - Wir teilen und erklären. Wir
 
 Derzeit gibt es im Rahmen der __AI@School Initiative__ folgende Projekte, mit denen wir als Deutsche Telekom unterstützen, Künstliche Intelligenz im Unterricht für Schüler und Schülerinnen spielerisch erlernbar zu machen.
 
-1. [Autonomes Fahren mit dem Calliope mini](./Calliope-Rennspiel/README.md)
+1. [Autonomes Fahren mit dem Calliope mini](./Calliope-Rennspiel/)
 
 Weitere Beiträge und Projekte sind herzlich willkommen!
 
@@ -71,11 +71,10 @@ Unser Engagement für Open Source bedeutet, dass wir allen interessierten Partei
 
 ## Lizenzierung
 
-Copyright (c) 2020 Deutsche Telekom AG.
+Copyright (c) 2020 Deutsche Telekom AG.  
+Copyright (c) 2020 Fraunhofer (für OpenRoberta Beiträge)
 
-Copyright (c) 2020 Fraunhofer (für OpenRoberta Anteile)
-
-Die Dokumentation ist lizenziert unter __[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de)__.
+The documentation is licensed under __[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de)__.
 
 The code is licensed under **MIT License** (the "License"); you may not use this file except in compliance with the License.
 

@@ -1,3 +1,5 @@
-# Warum existiert dieses Verzeichnis
+# Erläuterung des Verzeichnisses und Verzeichnisinhalts
 
-Dieses Verzeichnis wird vom Orange workflow ´ki-trainieren-orange.ows´ zur Zwischenspeicherung relevanter prozessierter Daten verwendet.
+In diesem Verzeichnis speichert das Python Skript `ki-datenlogger.py` die von den Calliopes eingehenden Rohdaten.
+
+Desweiteren erhält es ein Set von von Calliope gesammelten Beispieldaten, mit denen man schon erste anschauliche KI-Experimente machen kann, auch ohne die Calliope mini Hardware zu besitzen.

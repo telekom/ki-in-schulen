@@ -20,15 +20,16 @@ Kinder bringen in einem Workshop einem “autonomen Auto” das selbständige (a
 
 Um diesen Workshop an Schulen durchzuführen, stellen wir folgende Dokumentation bereit:
 
+[Dokumentation](./Dokumentation)
+
 * Präsentation, adressiert an Lehrkräfte, mit Erläuterung des Projekthintergrund und Ideen zum Einbau in Informatik-Curricula
 * Präsentation, adressiert an SuS, zur Nutzung im Unterricht
 * zusätzliche Erläuterungen zur SuS-Präsentation (für Lehrkräfte)
-
+* Installationsanleitung
+  
 ### Los geht's!
 
-Folgende Schritte können interessierte durchführen, um in das Projekt einzusteigen:
-
-1. Dieses Repository lokal klonen
-2. Die an Lehrkräfte adressierte Dokumentation durchlesen, um einen Überblick zu erhalten, wie die verschiedenen Softwarekomponenten zusammenhängen und welche Möglichkeiten bestehen, die Elemente in einem Curriculum zu nutzen
+1. Die an Lehrkräfte adressierte Dokumentation durchlesen, um einen Überblick zu erhalten, wie die verschiedenen Softwarekomponenten zusammenhängen und welche Möglichkeiten bestehen, die Elemente in einem Curriculum zu nutzen
+2. Dieses Repository lokal klonen (per git) oder das master.zip herunterladen
 3. Der Installationsanleitung folgen und einen Arbeitsrechner "fit" machen für die Projektsoftware (alles ist Python-basiert)
 4. Der SuS-Präsentation folgen, um einen Calliope Mini künstlich intelligent zu machen

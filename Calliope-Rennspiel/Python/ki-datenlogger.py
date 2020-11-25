@@ -1,7 +1,7 @@
 #
 # ki-datenlogger.py$
 #
-# (C) 2020, Christian A. Schiller, Deutsche Telekom IT GmbH
+# (C) 2020, Christian A. Schiller, Deutsche Telekom AG
 #
 # Deutsche Telekom AG and all other contributors /
 # copyright owners license this file to you under the
