@@ -60,12 +60,29 @@ if len(sys.argv)<2:
     print('     (2) Das trainierte ML-Modell als JSON-Datei zur Nutzung mit Calliope Mini:')
     print('     ./modelle/sklearn-py-modell-<ZEITSTEMPEL>.json')
     print("Nutzung:\n")
-    print("python ./ki-trainieren-sklearn.py <Rohdaten>\n")
+    print("python ./ki-trainieren-sklearn.py <Rohdaten> <HiddenLayer\n")
     print("     <Rohdaten>: Name der CSV-Datei (erzeugt durch ki-datenlogger.py) für Training des KI-Modells\n")
+    print("     <Hiddenlayer>: Größe der 2 oder 3 Hidden Layer im Format L1,L2 oder L1,L2,L3 - standard 7,7\n")
     raise SystemExit("Bye.")
 
 # Laden der Rohdaten (Terminal-Output als CSV-Datei)
 filename_raw = sys.argv[1]
+
+# Festelegen der Hidden Layer Size
+try:
+    hidden_layers_raw = sys.argv[2]
+    try:
+        hidden_layers = hidden_layers_raw.split (",")
+    except:
+        raise SystemExit("Falsche Syntax für Hidden Layers. Programm wird beendet.")
+except:
+    hidden_layers_raw = "7,7"
+    hidden_layers = hidden_layers_raw.split (",")
+if len(hidden_layers)>3 or len(hidden_layers)<1:
+    raise SystemExit("Nicht unterstützte Anzahl von Hidden Layers. Programm wird beendet.")
+hidden_layers = list(map(int, hidden_layers))
+print("Hidden Layers:",hidden_layers)
+
 df_raw = pd.read_csv(filename_raw)
 Xr = df_raw[['PlayerPos','Car1Pos','Car2Pos','Car3Pos','Car4Pos','Car5Pos']].values
 yr = df_raw['Action'].values
@@ -82,7 +99,7 @@ Xr = preprocessing.minmax_scale(Xr, feature_range=(0.0, 1.0))
 X, Xt, y, yt = train_test_split(Xr, yr, test_size=0.2, random_state=42, shuffle=True, stratify=yr)
 
 # Instanziieren des ML-Modells
-mlp = MLPClassifier(hidden_layer_sizes=(10,10),
+mlp = MLPClassifier(hidden_layer_sizes=tuple(hidden_layers),
                     activation='relu', # default relu
                     solver='adam', # default sgd
                     max_iter=5000, # default 200
@@ -123,8 +140,14 @@ for item in mlp.intercepts_:
 
 filename = './modelle/sklearn-py-modell-'+stamp+'.json'
 
+def round_floats(o):
+    if isinstance(o, float): return round(o, 6)
+    if isinstance(o, dict): return {k: round_floats(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)): return [round_floats(x) for x in o]
+    return o
+
 with open(filename, 'w') as outfile:
-    json.dump(data, outfile)
+    json.dump(round_floats(data), outfile)
 
 print("JSON-Datei des trainierten ML-Modells gespeichert.")
 print("Dateiname: "+filename)
