@@ -126,11 +126,16 @@ print("Pickle-Datei des trainierten ML-Modells gespeichert.")
 print("Dateiname: "+filename)
 
 # Speichern des Modells (JSON-Format zur Nutzung auf Calliope Mini)
+
+jsonlayers = []
+jsonlayers.append(6) # input layers
+jsonlayers += hidden_layers # hidden Layers
+jsonlayers.append(3) # output layer
+
 data = {}
 data['params'] = []
-data['params'].append({'input_layer_size': 6})
-data['params'].append({'output_layer_size': 3})
-data['params'].append(mlp.get_params(True))
+data['params'].append({'layers': jsonlayers})
+data['params'].append({'act': 'relu'})
 data['coefs'] = []
 for item in mlp.coefs_:
     data['coefs'].append(item.tolist())
@@ -147,7 +152,7 @@ def round_floats(o):
     return o
 
 with open(filename, 'w') as outfile:
-    json.dump(round_floats(data), outfile)
+    json.dump(round_floats(data), outfile, separators=(',',':'))
 
 print("JSON-Datei des trainierten ML-Modells gespeichert.")
 print("Dateiname: "+filename)
