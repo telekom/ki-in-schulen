@@ -1,7 +1,7 @@
 /*
  * ki-in-schulen$
  *
- * (C) 2020, Christian A. Schiller, Ferenc Hechler, Mirko Jelinek, Dirk Wolters, Deutsche Telekom AG
+ * (C) 2021, Christian A. Schiller, Ferenc Hechler, Mirko Jelinek, Dirk Wolters, Deutsche Telekom AG
  *
  * Deutsche Telekom AG and all other contributors /
  * copyright owners license this file to you under the
@@ -61,6 +61,7 @@ function erzeugeTrainingsdatensatz () {
     }
     Ausgabe_String = "" + Ausgabe_String + output
     radio.sendString(Ausgabe_String)
+    serial.writeLine(Ausgabe_String)
 }
 input.onButtonPressed(Button.A, function () {
     if (playerCar.get(LedSpriteProperty.X) > 0) {
@@ -81,10 +82,16 @@ let snapshot: number[] = []
 let playerCar: game.LedSprite = null
 let output = ""
 let isConnected = 0
+let funkGruppe = 1
 isConnected = 0
 output = "x"
-radio.setGroup(1)
+radio.setGroup(funkGruppe)
 radio.setTransmitPower(7)
+serial.writeLine("Rennspiel - Funkgruppe " + funkGruppe)
+serial.writeLine("------------------------")
+basic.showNumber(funkGruppe)
+basic.pause(3000)
+
 basic.forever(function () {
     basic.pause(100)
     if (gameOn == true) {

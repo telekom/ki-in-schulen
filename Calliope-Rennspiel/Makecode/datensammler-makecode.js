@@ -1,7 +1,7 @@
 /*
  * ki-in-schulen$
  *
- * (C) 2020, Christian A. Schiller, Ferenc Hechler, Mirko Jelinek, Dirk Wolters, Deutsche Telekom AG
+ * (C) 2021, Christian A. Schiller, Ferenc Hechler, Mirko Jelinek, Dirk Wolters, Deutsche Telekom AG
  *
  * Deutsche Telekom AG and all other contributors /
  * copyright owners license this file to you under the
@@ -41,6 +41,9 @@ gather_data = false
 let packetCount = 0
 let loadPoint = game.createSprite(0, 0)
 loadPoint.set(LedSpriteProperty.Brightness, 0)
+serial.writeLine("Datensammler - Funkgruppe 1")
+serial.writeLine("---------------------------")
+
 control.inBackground(function () {
     while (true) {
         // sending ping
