@@ -64,7 +64,7 @@ Der "Datensammler-Calliope" wird nun an einen USB-Port des Schülergruppenrechne
 
 * Auf jedem Schülergruppenrechner ausführen: `python ki-trainieren-sklearn.py <CSV-Datei>` (CSV-Datei in Schritt 4 gespeichert)
 
-* Im Unterverzeichnis `modelle` wird ein trainiertes neuronales Netzwerk abgelegt unter dem angezeigten Dateinamen, bspw. `sklearn-py-modell-20210303114413.pkcls` und `sklearn-py-modell-20210303114413.json`
+* Im Unterverzeichnis `modelle` wird ein trainiertes neuronales Netzwerk abgelegt unter dem angezeigten Dateinamen, bspw. `sklearn-py-modell-20210302220807.pkcls` und `sklearn-py-modell-20210302220807.json`
 
 #### Schritt 6 - Testphase (KI die Steuerung übernehmen lassen: "IQ-Test" für die KI)
 
@@ -93,6 +93,6 @@ Projektziel ist es, dies für die SuS über die Oberfläche auf https://makecode
 Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert:
 
 * Auf dem Schülergruppenrechner ins Verzeichnis wechseln: `ki-in-schulen-master/Calliope-Rennspiel/Python/iq-test-calliope/`
-* Auf dem Schülergruppenrechner ausführen: `python iq-test-erstellen.py -r <JSON-Modelldatei>` (Die JSON-Modelldatei ist eine in Schritt 5 erzeugte Modelldatei, bspw. `sklearn-py-modell-20210303114413.json`)
+* Auf dem Schülergruppenrechner ausführen: `python iq-test-erstellen.py -r <JSON-Modelldatei>` (Die JSON-Modelldatei ist eine in Schritt 5 erzeugte Modelldatei, bspw. `sklearn-py-modell-20210302220807.json`)
 * Die erzeugte Calliope Hex-Datei `iq-test-calliope.hex` kann auf einen Calliope Mini kopiert werden
 * Die trainierte KI übernimmt die Steuerung im Rennspiel (manuelle Steuerung ist zusätzlich möglich)

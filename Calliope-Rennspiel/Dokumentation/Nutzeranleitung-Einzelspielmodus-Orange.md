@@ -84,8 +84,8 @@ Hierzu muss ein Calliope Mini per USB an den Schülerrechner anschließen
 * Das Orange Projekt enthält im Knoten "Trainieren und Speichern pures sklearn-Modell" auch das Python-Script der Basisvariante, sodass für entsprechend fortgeschrittene SuS auch entsprechender Einstieg in den Python-Code ermöglicht ist.
 
 * Diese Python-Skripte erstellen im Verzeichnis `modelle` ebenfalls Modelldateien, die bereits aus der Basisvariante des Projektes bekannt sind.
-  * Pickle-Modelldatei (Beispiel-Dateiname) `sklearn-ows-modell-20210302224418.pkcls`
-  * JSON-Modelldatei (Beispiel-Dateiname) `sklearn-ows-modell-20210302224418.json`
+  * Pickle-Modelldatei (Beispiel-Dateiname) `sklearn-ows-modell-20210302221649.pkcls`
+  * JSON-Modelldatei (Beispiel-Dateiname) `sklearn-ows-modell-20210302221649.json`
 
 #### Schritt 5 - Testphase (KI die Steuerung übernehmen lassen)
 
@@ -114,6 +114,6 @@ Projektziel ist es, die "Hirntransplantation" des trainierten KI-Modells für di
 Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert:
 
 * Auf dem Schülergruppenrechner ins Verzeichnis wechseln: `ki-in-schulen-master/Calliope-Rennspiel/Python/iq-test-calliope/`
-* Auf dem Schülergruppenrechner ausführen: `python iq-test-erstellen.py -r <JSON-Modelldatei>` (Die JSON-Modelldatei ist eine in Schritt 4 erzeugte Modelldatei, bspw. `sklearn-ows-modell-20210302224418.json`)
+* Auf dem Schülergruppenrechner ausführen: `python iq-test-erstellen.py -r <JSON-Modelldatei>` (Die JSON-Modelldatei ist eine in Schritt 4 erzeugte Modelldatei, bspw. `sklearn-ows-modell-20210302221649.json`)
 * Die erzeugte Calliope Hex-Datei `iq-test-calliope.hex` kann auf einen Calliope Mini kopiert werden
 * Die trainierte KI übernimmt die Steuerung im Rennspiel (manuelle Steuerung ist zusätzlich möglich)
