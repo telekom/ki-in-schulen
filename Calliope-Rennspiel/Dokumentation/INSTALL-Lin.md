@@ -1,6 +1,8 @@
 # Basisinstallation des Projektes auf Linux
 
-Das Projekt wurde in 2020 auf Basis Python 3.7 entwickelt. Ein Funktionieren mit höheren/niedrigeren Python-Versionen wurde nicht getestet.
+Das Projekt wurde in 2020 auf Basis Python 3.7 entwickelt. Ein Funktionieren mit höheren/niedrigeren Python-Versionen wurde bisher nicht getestet. Python 3.7 ist bis 2023 durch Sicherheitsupdates unterstützt.
+
+Da Debian/Ubuntu sehr weit verbreitet ist, bezieht sich diese Installationsanleitung auf Debian/Ubuntu, getestet wurde sie letztmals erfolgreich mit Kubuntu 20.04.1 LTS.
 
 1. __Unser Projekt als ZIP-Archiv herunterladen__
 
@@ -24,27 +26,31 @@ Eine manuelle Installation von Python und den für das Projekt notwendigen Paket
 
 4. __Erstellen der für das Projekt notwendigen Python-Umgebung mittels Anaconda (Befehl `conda`)__
 
-    __Variante A__
+    __Basisvariante - ohne Orange__
 
-    `conda env create -f=/ki-in-schulen-master/Calliope-Rennspiel/Python/calliope-rennspiel.yaml`
+    `conda env create -f=./ki-in-schulen-master/Calliope-Rennspiel/Python/conda-envs/ki-calliope-rennspiel-debian-x64-basis.yaml`
 
-    `conda activate calliope-rennspiel`
+    `conda activate ki-calliope-rennspiel-basis`
 
-    __Variante B__
+    __Expertenvariante - mit Orange__
 
-    `conda create -n calliope-rennspiel python=3.7.10`
+    Voraussetzung für die Installation der Expertenvariante ist der C++-Compiler `gcc`. Diesen muss man ggf. vorab installieren, sofern nicht standardmäßg auf dem Linux-System installiert - siehe Sektion "Tipps & Tricks" am Ende dieses Dokuments.
 
-    `conda activate calliope-rennspiel`
+    Die Installation der Expertenvariante mit Orange wird wie folgt durchgeführt:
 
-    `pip install pyqt5==5.15.3 orange3==3.26 pyserial==3.5 pynput==1.7.1 pygame==1.9.4`
+    `conda env create -f=./ki-in-schulen-master/Calliope-Rennspiel/Python/conda-envs/ki-calliope-rennspiel-debian-x64-orange3.yaml`
+
+    `conda activate ki-calliope-rennspiel-orange3`
 
 5. __Test der Installation__
 
-  Ins Python Code-Verzeichnis wechseln
+  __Test der Basisvariante - ohne Orange__
 
-    ``cd ki-in-schulen-master/Calliope-Rennspiel/Python``
+  Ins Python Code-Verzeichnis wechseln:
 
-  Nacheinander ausführen und schauen ob Fehler auftauchen (dann ggf. notwendige Bibliotheken mit `conda` oder `pip` nachinstallieren).
+  `cd ki-in-schulen-master/Calliope-Rennspiel/Python`
+
+  Nacheinander ausführen und schauen ob Fehler auftauchen (dann ggf. notwendige Bibliotheken mit `conda install` oder `pip install` nachinstallieren).
   Es sollten jeweils die Erläuterungsbildschirme für die Kommandozeilenparameter angezeigt werden, keine Fehlermeldungen.
 
   `python ki-datenlogger.py`
@@ -53,9 +59,9 @@ Eine manuelle Installation von Python und den für das Projekt notwendigen Paket
 
   `python ki-rennspiel.py`
 
-  optional, für fortgeschrittene Experimente:
+  __Test der Expertenvariante - mit Orange__
 
-  `orange-canvas` ausführen, darin nach Start die Projektdatei ``ki-trainieren-orange.ows`` laden.
+  `orange-canvas` ausführen, darin nach Start die Projektdatei `ki-trainieren-orange.ows` laden.
 
 ### Tipps & Tricks
 
