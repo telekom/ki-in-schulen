@@ -1,11 +1,9 @@
 # Nutzeranleitung Gruppenspielmodus
 
-Voraussetzung ist eine erfolgreich durchgeführte und getestete Installation unserers Projektes anhand der Installationsanleitungen:
+Voraussetzung ist eine erfolgreich durchgeführte und getestete Basisinstallation unserers Projektes anhand der Installationsanleitungen:
 * [Windows](./INSTALL-Win.md)
 * [Linux](./INSTALL-Lin.md)
 * [MacOS](./INSTALL-Mac.md)
-
-Der "__Gruppenspielmodus__" ist für Unter- und Mittelstufe empfohlen aufgrund der weniger aufwändigen Installation. Im "Gruppenspielmodus" wird __pro Schülergruppe eine künstliche Intelligenz trainiert__. Hierfür ist eine Basisinstallation auf einem Schülergruppenrechner erforderlich, damit Daten pro Schülergruppe auf diesem gesammelt werden können.
 
 ### Durchführung "Gruppenspielmodus"
 
@@ -17,11 +15,11 @@ Pro Schülergruppe wird 1 "Datensammler-Calliope" benötigt, zu dem mehrere "Ren
 
 Diesen Schritt mit angepasster Funkgruppe (__funkgruppe1__, __funkgruppe2__, ...) wiederholen, bis alle "Rennspiel-Calliopes" für alle Schüler aller Schülergruppen installiert sind.
 
-Einen Calliope Mini per USB an den Schülergruppenrechner anschließen
+Für die Installation wird pro Schüler der Schülergruppe jeweils ein Calliope Mini per USB an den Schülergruppenrechner angeschlossen und dann das Rennspiel installiert:
 
 __MakeCode-Variante__
 
-* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/rennspiel-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren.
+* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/rennspiel-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
 __OpenRoberta-Variante__
 
@@ -48,13 +46,13 @@ __OpenRoberta-Variante__
 
 * Linux: `ls -al /dev/ttyACM*`
 
-  ggf. Nutzer zur `dialout` Nutzergruppe hinzufügen, damit dieser auf den Calliope Mini auch zugreifen darf.
+  Unter Linux ist ggf. der Projektnutzer zur `dialout` Nutzergruppe hinzufügen, damit dieser auf den Calliope Mini auch zugreifen darf.
 
   `sudo usermod -aG <username> dialout`
 
-  `sudo adduser <goethe> dialout`
+  `sudo adduser <username> dialout`
 
-####Schritt 4 - Datensammel-Phase
+#### Schritt 4 - Datensammel-Phase
 
 * Auf jedem Schülergruppenrechner ausführen: `python ki-datenlogger.py <COM-Port>` (COM-Port in Schritt 3 herausgefunden)
 
@@ -62,13 +60,15 @@ __OpenRoberta-Variante__
 
 * Im Unterverzeichnis `csv-rohdaten` werden die Rohdaten abgelegt unter dem angezeigten Dateinamen, bspw. `ki-rennspiel-log-20210303111213.csv`
 
-####Schritt 5 - Trainingsphase (KI anlernen)
+#### Schritt 5 - Trainingsphase (KI anlernen)
 
 * Auf jedem Schülergruppenrechner ausführen: `python ki-trainieren-sklearn.py <CSV-Datei>` (CSV-Datei in Schritt 4 gespeichert)
 
-* Im Unterverzeichnis `modelle` wird ein trainiertes neuronales Netzwerk abgelegt unter dem angezeigten Dateinamen, bspw. `sklearn-py-modell-20210303114413.pkcls`
+* Im Unterverzeichnis `modelle` wird ein trainiertes neuronales Netzwerk abgelegt unter dem angezeigten Dateinamen, bspw. `sklearn-py-modell-20210303114413.pkcls` und `sklearn-py-modell-20210303114413.json`
 
-####Schritt 6 - Testphase (KI die Steuerung übernehmen lassen)
+#### Schritt 6 - Testphase (KI die Steuerung übernehmen lassen: "IQ-Test" für die KI)
+
+__Variante A: IQ-Test auf Schülergruppenrechner__
 
 * Auf jedem Schülergruppenrechner ausführen: `python ki-rennspiel.py sklearn <PKCLS-Datei>` (PKCLS-Datei in Schritt 5 gespeichert)
 
@@ -83,3 +83,16 @@ __OpenRoberta-Variante__
   * KI spielen lassen durch Drücken von Taste __2__
   * 50 Episoden werden durch die KI gespielt
   * Medianwert der erreichten Punktzahl wird angezeigt.
+
+__Variante B: IQ-Test auf Calliope Mini__
+
+Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope Mini getestet werden.
+
+Projektziel ist es, dies für die SuS über die Oberfläche auf https://makecode.calliope.cc nachvollziehbar zu machen; Stand März 2021 verhinderte jedoch ein Bug in Makecode diese Variante.
+
+Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert:
+
+* Auf dem Schülergruppenrechner ins Verzeichnis wechseln: `ki-in-schulen-master/Calliope-Rennspiel/Python/iq-test-calliope/`
+* Auf dem Schülergruppenrechner ausführen: `python iq-test-erstellen.py -r <JSON-Modelldatei>` (Die JSON-Modelldatei ist eine in Schritt 5 erzeugte Modelldatei, bspw. `sklearn-py-modell-20210303114413.json`)
+* Die erzeugte Calliope Hex-Datei `iq-test-calliope.hex` kann auf einen Calliope Mini kopiert werden
+* Die trainierte KI übernimmt die Steuerung im Rennspiel (manuelle Steuerung ist zusätzlich möglich)

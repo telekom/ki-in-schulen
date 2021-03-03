@@ -53,7 +53,7 @@ __OpenRoberta-Variante__
 
   `sudo adduser <username> dialout`
 
-####Schritt 3 - Datensammel-Phase
+#### Schritt 3 - Datensammel-Phase
 
 * Auf jedem Schülerrechner ausführen: `python ki-datenlogger.py <COM-Port>` (COM-Port in Schritt 2 herausgefunden)
 
@@ -61,7 +61,7 @@ __OpenRoberta-Variante__
 
 * Im Unterverzeichnis `csv-rohdaten` werden die Rohdaten abgelegt unter dem angezeigten Dateinamen, bspw. `ki-rennspiel-log-20210303111213.csv`
 
-####Schritt 4 - Trainingsphase (KI anlernen)
+#### Schritt 4 - Trainingsphase (KI anlernen)
 
 * Auf jedem Schülerrechner ausführen: `orange-canvas` (CSV-Datei in Schritt 3 gespeichert). Es startet das Programm Orange.
 
@@ -75,7 +75,7 @@ __OpenRoberta-Variante__
 
 * Danach läuft der Trainingszyklus automatisch, was durch ein Durchlaufen der roten Punkte durch den Graphen beobachtet werden kann.
 
-* Standardmäßig trainiert das Orange Projekt ein __AdaBoost__ basiertes Modell. Das Projekt enthält auch Knoten für ein __neuronales netzwerk__ und ein __k nearest Neighbors__ basiertes Modell.
+* Standardmäßig trainiert das Orange Projekt ein __AdaBoost__ basiertes Modell. Das Projekt enthält auch Knoten für ein __neuronales netzwerk__ und ein __k nearest Neighbors (kNN)__ basiertes Modell. Weitere Algorithmen sind im Baukastensystem auf der linken Seite der Orange Nutzeroberfläche im Bereich "Models/Modelle" zu finden - fröhliches Experimentieren ist hier möglich!
 
 * Am Ende des Trainings - egal welcher Algorithmus - wird im Verzeichnis `modelle` eine Datei namens `orange3-model.pkcls` erstellt.
 
@@ -88,6 +88,8 @@ __Optional__
   * JSON-Modelldatei (Beispiel-Dateiname) `sklearn-ows-modell-20210302224418.json`
 
 ####Schritt 5 - Testphase (KI die Steuerung übernehmen lassen)
+
+__Variante A: IQ-Test auf Schülergruppenrechner__
 
 * Auf jedem Schülerrechner ausführen: `python ki-rennspiel.py orange3 <PKCLS-Datei>` (PKCLS-Datei in Schritt 4 gespeichert)
 
@@ -102,3 +104,16 @@ __Optional__
   * KI spielen lassen durch Drücken von Taste __2__
   * 50 Episoden werden durch die KI gespielt
   * Medianwert der erreichten Punktzahl wird angezeigt.
+
+__Variante B: IQ-Test auf Calliope Mini__
+
+Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope Mini getestet werden. Dies erfordert jedoch die Durchführung der optionalen letzten Teilschritte im Schritt 4, die Nutzung des Python-Skript-Knotens. Ein Nutzung der weiteren KI-Algorithmen, die mit Orange möglich sind (beispielsweise kNN, AdaBoost etc.) ist auf dem Calliope Mini nicht umgesetzt.
+
+Projektziel ist es, die "Hirntransplantation" des trainierten KI-Modells für die SuS über die Oberfläche auf https://makecode.calliope.cc nachvollziehbar zu machen; Stand März 2021 verhinderte jedoch ein Bug in Makecode diese Variante.
+
+Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert:
+
+* Auf dem Schülergruppenrechner ins Verzeichnis wechseln: `ki-in-schulen-master/Calliope-Rennspiel/Python/iq-test-calliope/`
+* Auf dem Schülergruppenrechner ausführen: `python iq-test-erstellen.py -r <JSON-Modelldatei>` (Die JSON-Modelldatei ist eine in Schritt 4 erzeugte Modelldatei, bspw. `sklearn-ows-modell-20210302224418.json`)
+* Die erzeugte Calliope Hex-Datei `iq-test-calliope.hex` kann auf einen Calliope Mini kopiert werden
+* Die trainierte KI übernimmt die Steuerung im Rennspiel (manuelle Steuerung ist zusätzlich möglich)

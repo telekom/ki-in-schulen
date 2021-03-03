@@ -3,9 +3,9 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/telekom/pxt-ki-in-schulen/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/telekom/pxt-ki-in-schulen?style=flat"></a>
-    <a href="https://github.com/telekom/pxt-ki-in-schulen/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/telekom/pxt-ki-in-schulen?style=flat"></a>
-    <a href="https://github.com/telekom/pxt-ki-in-schulen/blob/master/LICENSE" title="License"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat"></a>
+    <a href="https://github.com/telekom/ki-in-schulen/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/telekom/ki-in-schulen?style=flat"></a>
+    <a href="https://github.com/telekom/ki-in-schulen/issues" title="Open Issues"><img src="https://img.shields.io/github/issues/telekom/ki-in-schulen?style=flat"></a>
+    <a href="https://github.com/telekom/ki-in-schulen/blob/master/LICENSE" title="License"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat"></a>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 ## Einleitung
 
-Im Rahmen der __Deutsche Telekom IT@School Initiative__ engagieren sich Mitarbeiter der Deutschen Telekom ehrenamtlich darin, MINT-Bildung an Schulen zu unterstützen. Eine Gesamtübersicht aller Projekte dieser Gemeinschaft findet sich hier: https://www.robotik4kids.de/
+Im Rahmen der __Deutsche Telekom IT@School Initiative__ engagieren sich Mitarbeiter der Deutschen Telekom ehrenamtlich darin, MINT-Bildung an Schulen zu fördern. Eine Gesamtübersicht aller Projekte dieser Gemeinschaft findet sich hier: https://digitale-schule.jetzt/
 
 Aus dieser Gemeinschaft heraus hat sich Ende 2019 das erste Projekt "__Autonomes Fahren mit dem Calliope mini__" entwickelt und wurde 2020 umgesetzt, um an Schulen speziell die Kompetenz für das Zukunftsthema __Künstliche Intelligenz__ zu stärken.
 
@@ -36,7 +36,7 @@ Das Projekt AI@School läuft unter __Leitlinie 9 - Wir teilen und erklären. Wir
 
 ## Projektliste
 
-Derzeit gibt es im Rahmen der __AI@School Initiative__ folgende Projekte, mit denen wir als Deutsche Telekom unterstützen, Künstliche Intelligenz im Unterricht für Schüler und Schülerinnen spielerisch erlernbar zu machen.
+Derzeit gibt es im Rahmen der __AI@School Initiative__ folgende Projekte, mit denen wir als Deutsche Telekom unterstützen, Künstliche Intelligenz im Unterricht für Schüler und Schülerinnen spielerisch erleb- und erlernbar zu machen.
 
 1. [Autonomes Fahren mit dem Calliope mini](./Calliope-Rennspiel/)
 
@@ -48,8 +48,13 @@ Die folgenden Kanäle sind verfügbar für Diskussionen, Feedback und Unterstüt
 
 | Type                     | Channel                                                |
 | ------------------------ | ------------------------------------------------------ |
-| **Issues**   | <a href="https://github.com/telekom/ki-in-schulen/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/github/issues/telekom/ki-in-schulen?style=flat-square"></a> </a>   |
-| **Other Requests**    | <a href="mailto:opensource@telekom.de" title="Email Open Source Team"><img src="https://img.shields.io/badge/email-Open%20Source%20Team-green?logo=mail.ru&style=flat-square&logoColor=white"></a>   |
+| **Github Issues**   | <a href="https://github.com/telekom/ki-in-schulen/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/github/issues/telekom/ki-in-schulen?style=flat-square"></a> </a>   |
+| **Andere Anfragen**    | <a href="mailto:opensource@telekom.de" title="Email Open Source Team"><img src="https://img.shields.io/badge/email-Open%20Source%20Team-green?logo=mail.ru&style=flat-square&logoColor=white"></a>   |
+
+Zusätzlich stehen folgende Kommunikationskanäle zur Kontaktaufnahme mit dem Projektteam zur Verfügung:
+* Email: mailto:christian.schiller@telekom.de
+* Twitter: https://www.twitter.com/c-a-schiller
+* Instagram: https://www.instagram.com/c_a_schiller
 
 ## Mitmachen
 
@@ -71,8 +76,8 @@ Unser Engagement für Open Source bedeutet, dass wir allen interessierten Partei
 
 ## Lizenzierung
 
-Copyright (c) 2020 Deutsche Telekom AG.  
-Copyright (c) 2020 Fraunhofer (für OpenRoberta Beiträge)
+Copyright (c) 2021 Deutsche Telekom AG.  
+Copyright (c) 2021 Fraunhofer (für OpenRoberta Beiträge)
 
 The documentation is licensed under __[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de)__.
 
