@@ -53,7 +53,7 @@ Die folgenden Kanäle sind verfügbar für Diskussionen, Feedback und Unterstüt
 
 Zusätzlich stehen folgende Kommunikationskanäle zur Kontaktaufnahme mit dem Projektteam zur Verfügung:
 * Email: mailto:christian.schiller@telekom.de
-* Twitter: https://www.twitter.com/c-a-schiller
+* Twitter: https://www.twitter.com/c_a_schiller
 * Instagram: https://www.instagram.com/c_a_schiller
 
 ## Mitmachen

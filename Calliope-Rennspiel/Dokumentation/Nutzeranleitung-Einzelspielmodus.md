@@ -24,11 +24,11 @@ Diesen Schritt muss jeder Schüler durchführen.
 
 Hierzu muss ein Calliope Mini per USB an den Schülerrechner angeschlossen werden.
 
-__MakeCode-Variante__
+*MakeCode-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/rennspiel-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe ist im Einzelspielmodus egal, da die Datensammlung über USB funktioniert)
 
-__OpenRoberta-Variante__
+*OpenRoberta-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/RaceCar-funkgruppe1.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe ist im Einzelspielmodus egal)
 
@@ -60,7 +60,7 @@ __OpenRoberta-Variante__
 
 #### Schritt 5 - Testphase (KI die Steuerung übernehmen lassen)
 
-__Variante A: IQ-Test auf Schülergruppenrechner__
+*Variante A: IQ-Test auf Schülergruppenrechner*
 
 * Auf jedem Schülergruppenrechner ausführen: `python ki-rennspiel.py sklearn <PKCLS-Datei>` (PKCLS-Datei in Schritt 5 gespeichert)
 
@@ -76,7 +76,7 @@ __Variante A: IQ-Test auf Schülergruppenrechner__
   * 50 Episoden werden durch die KI gespielt
   * Medianwert der erreichten Punktzahl wird angezeigt.
 
-__Variante B: IQ-Test auf Calliope Mini__
+*Variante B: IQ-Test auf Calliope Mini*
 
 Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope Mini getestet werden.
 

@@ -33,11 +33,11 @@ Diesen Schritt muss jeder Schüler durchführen.
 
 Hierzu muss ein Calliope Mini per USB an den Schülerrechner anschließen
 
-__MakeCode-Variante__
+*MakeCode-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/rennspiel-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe ist im Einzelspielmodus egal)
 
-__OpenRoberta-Variante__
+*OpenRoberta-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/RaceCar-funkgruppe1.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe ist im Einzelspielmodus egal)
 
@@ -79,7 +79,7 @@ __OpenRoberta-Variante__
 
 * Am Ende des Trainings - egal welcher Algorithmus - wird im Verzeichnis `modelle` eine Datei namens `orange3-model.pkcls` erstellt.
 
-__Optional__
+*Optionale Teilschritte*
 
 * Das Orange Projekt enthält im Knoten "Trainieren und Speichern pures sklearn-Modell" auch das Python-Script der Basisvariante, sodass für entsprechend fortgeschrittene SuS auch entsprechender Einstieg in den Python-Code ermöglicht ist.
 
@@ -87,9 +87,9 @@ __Optional__
   * Pickle-Modelldatei (Beispiel-Dateiname) `sklearn-ows-modell-20210302224418.pkcls`
   * JSON-Modelldatei (Beispiel-Dateiname) `sklearn-ows-modell-20210302224418.json`
 
-####Schritt 5 - Testphase (KI die Steuerung übernehmen lassen)
+#### Schritt 5 - Testphase (KI die Steuerung übernehmen lassen)
 
-__Variante A: IQ-Test auf Schülergruppenrechner__
+*Variante A: IQ-Test auf Schülergruppenrechner*
 
 * Auf jedem Schülerrechner ausführen: `python ki-rennspiel.py orange3 <PKCLS-Datei>` (PKCLS-Datei in Schritt 4 gespeichert)
 
@@ -105,7 +105,7 @@ __Variante A: IQ-Test auf Schülergruppenrechner__
   * 50 Episoden werden durch die KI gespielt
   * Medianwert der erreichten Punktzahl wird angezeigt.
 
-__Variante B: IQ-Test auf Calliope Mini__
+*Variante B: IQ-Test auf Calliope Mini*
 
 Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope Mini getestet werden. Dies erfordert jedoch die Durchführung der optionalen letzten Teilschritte im Schritt 4, die Nutzung des Python-Skript-Knotens. Ein Nutzung der weiteren KI-Algorithmen, die mit Orange möglich sind (beispielsweise kNN, AdaBoost etc.) ist auf dem Calliope Mini nicht umgesetzt.
 

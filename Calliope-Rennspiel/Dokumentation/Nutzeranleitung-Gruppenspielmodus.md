@@ -17,11 +17,11 @@ Diesen Schritt mit angepasster Funkgruppe (__funkgruppe1__, __funkgruppe2__, ...
 
 Für die Installation wird pro Schüler der Schülergruppe jeweils ein Calliope Mini per USB an den Schülergruppenrechner angeschlossen und dann das Rennspiel installiert:
 
-__MakeCode-Variante__
+*MakeCode-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/rennspiel-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
-__OpenRoberta-Variante__
+*OpenRoberta-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/RaceCar-funkgruppe1.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
@@ -32,11 +32,11 @@ Diesen Schritt mit angepasster Funkgruppe (__funkgruppe1__, __funkgruppe2__, ...
 
 Der "Datensammler-Calliope" wird nun an einen USB-Port des Schülergruppenrechners angeschlossen und bleibt dort angeschlossen.
 
-__MakeCode-Variante__
+*MakeCode-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/datensammler-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
-__OpenRoberta-Variante__
+*OpenRoberta-Variante*
 
 * Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/RaceCarDataCollector-funkgruppe1.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
@@ -68,7 +68,7 @@ __OpenRoberta-Variante__
 
 #### Schritt 6 - Testphase (KI die Steuerung übernehmen lassen: "IQ-Test" für die KI)
 
-__Variante A: IQ-Test auf Schülergruppenrechner__
+*Variante A: IQ-Test auf Schülergruppenrechner*
 
 * Auf jedem Schülergruppenrechner ausführen: `python ki-rennspiel.py sklearn <PKCLS-Datei>` (PKCLS-Datei in Schritt 5 gespeichert)
 
@@ -84,7 +84,7 @@ __Variante A: IQ-Test auf Schülergruppenrechner__
   * 50 Episoden werden durch die KI gespielt
   * Medianwert der erreichten Punktzahl wird angezeigt.
 
-__Variante B: IQ-Test auf Calliope Mini__
+*Variante B: IQ-Test auf Calliope Mini*
 
 Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope Mini getestet werden.
 
