@@ -81,19 +81,21 @@ def patch_hex_file(input_file, output_file, search_pattern, replacement_text):
 
     with open (input_file, "r") as infile:
         line=infile.readline()
+        line = line.replace("\r", "").replace("\n", "")
         with open (output_file, "w") as outfile:
             previous_line = None
             while line:
-                line = line.replace("\r", "").replace("\n", "")
                 if line.find(search_pattern) != -1:
                     startOverwrite(outfile, previous_line, line, infile, replacement_text)
                     previous_line = None
                     line = infile.readline()
+                    line = line.replace("\r", "").replace("\n", "")
                 if previous_line is not None:
                     outfile.write(previous_line+"\n")
                     print(previous_line)
                 previous_line = line;
                 line=infile.readline()
+                line = line.replace("\r", "").replace("\n", "")
             if previous_line is not None:
                 outfile.write(previous_line+"\n")
                 print(previous_line)
