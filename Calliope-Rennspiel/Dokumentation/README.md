@@ -32,4 +32,4 @@ Der "__Einzelspielmodus__" ist für Oberstufe empfohlen, und kann optional mit e
 
 * [Nutzeranleitung Gruppenspielmodus](./Nutzeranleitung-Gruppenspielmodus.md)
 * [Nutzeranleitung Einzelspielmodus - Basisversion](./Nutzeranleitung-Einzelspielmodus.md)
-* [Nutzeranleitung Einzelspielmodus - Expertenverson mit Orange](./Nutzeranleitung-Einzelspielmodus-Orange.md)
+* [Nutzeranleitung Einzelspielmodus - Expertenversion mit Orange](./Nutzeranleitung-Einzelspielmodus-Orange.md)
