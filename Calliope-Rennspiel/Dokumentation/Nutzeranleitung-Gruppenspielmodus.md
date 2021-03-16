@@ -11,6 +11,8 @@ Voraussetzung ist eine erfolgreich durchgeführte und getestete Basisinstallatio
 
 Pro Schülergruppe wird 1 "Datensammler-Calliope" benötigt, zu dem mehrere "Rennspiel-Calliopes" ihre Rohdaten per Funk senden können. Jede Schülergruppe erhält hierfür einen eigenen Funkkanal, um die Robustheit des Workshops zu erhöhen.
 
+![Gruppenspielmodus](./gruppenspiel.png)
+
 #### Schritt 1 - Rennspiel auf den Calliope Minis der Schüler installieren
 
 Diesen Schritt mit angepasster Funkgruppe (__funkgruppe1__, __funkgruppe2__, ...) wiederholen, bis alle "Rennspiel-Calliopes" für alle Schüler aller Schülergruppen installiert sind.

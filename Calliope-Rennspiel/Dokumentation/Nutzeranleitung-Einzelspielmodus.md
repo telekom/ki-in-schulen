@@ -18,6 +18,8 @@ Im "Einzelspielmodus" kann __jeder Schüler seine eigene künstliche Intelligenz
 
 Pro Schüler wird 1 "Rennspiel-Calliope" benötigt, der direkt per USB an den Rechner des Schülers angeschlossen wird.
 
+![Einzelspielmodus Basisversion](./einzelspiel-basis.png)
+
 #### Schritt 1 - Rennspiel installieren
 
 Diesen Schritt muss jeder Schüler durchführen.

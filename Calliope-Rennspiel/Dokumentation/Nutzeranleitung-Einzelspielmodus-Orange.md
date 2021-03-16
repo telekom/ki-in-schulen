@@ -1,4 +1,4 @@
-# Nutzeranleitung Einzelspielmodus (Basis)
+# Nutzeranleitung Einzelspielmodus (Expertenversion)
 
 Voraussetzung ist eine erfolgreich durchgeführte und getestete Installation der Expertenvariante unserers Projektes anhand der Installationsanleitungen:
 * [Windows](./INSTALL-Win.md)
@@ -26,6 +26,8 @@ Im bereitgestellten Orange Workflow sind beispielsweise drei Varianten vorkonfig
 #### Einleitung
 
 Pro Schüler wird 1 "Rennspiel-Calliope" benötigt, der direkt per USB an den Rechner des Schülers angeschlossen wird.
+
+![Einzelspielmodus Expertenversion](./einzelspiel-experte.png)
 
 #### Schritt 1 - Rennspiel installieren
 
