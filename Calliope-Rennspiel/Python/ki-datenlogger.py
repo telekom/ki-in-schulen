@@ -99,7 +99,7 @@ while True:
 	line = line[:-2] # CRLF entfernen
 	line = ''.join(line.split()) # Leerzeichen entfernen
 	print(line)
-	if line.startswith("P") or line.startswith("\x00"):
+	if line.startswith("P") or line.startswith("\x00") or line.startswith("R"):
 		print("Header erkannt - ignorieren")
 	else:
 		print("Nutzdaten erkannt - Übernahme in DataFrame")
