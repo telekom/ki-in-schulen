@@ -41,7 +41,7 @@ Hierzu muss ein Calliope Mini per USB an den Schülerrechner anschließen
 
 *OpenRoberta-Variante*
 
-* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/RaceCar-funkgruppe1.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe ist im Einzelspielmodus egal)
+* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/rennspiel-openroberta.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe __muss__ beim Start auf __0__ gewählt bleiben, damit das USB-Logging aktiv ist)
 
 #### Schritt 2 - COM-Port des per USB angeschlossenen "Rennspiel-Calliopes" herausfinden
 

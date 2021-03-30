@@ -25,22 +25,23 @@ Für die Installation wird pro Schüler der Schülergruppe jeweils ein Calliope 
 
 *OpenRoberta-Variante*
 
-* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/RaceCar-funkgruppe1.hex` auf den per USB angeschlossenen Calliope Mini kopieren
+* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/rennspiel-openroberta.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
 
 #### Schritt 2 - Datensammler pro Schülergruppe installieren
 
 Diesen Schritt mit angepasster Funkgruppe (__funkgruppe1__, __funkgruppe2__, ...) wiederholen, bis die gewünschte Anzahl der Schülergruppen erreicht ist.
+* Hinweis: Bei der *OpenRoberta-Variante* kann die Funkgruppe beim Start des Datensammlers per Taste gewählt werden.
 
 Der "Datensammler-Calliope" wird nun an einen USB-Port des Schülergruppenrechners angeschlossen und bleibt dort angeschlossen.
 
 *MakeCode-Variante*
 
-* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/datensammler-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren
+* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/datensammler-funkgruppe<x>-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
 *OpenRoberta-Variante*
 
-* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/RaceCarDataCollector-funkgruppe1.hex` auf den per USB angeschlossenen Calliope Mini kopieren
+* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/datensammler-openroberta.hex` auf den per USB angeschlossenen Calliope Mini kopieren
 
 #### Schritt 3 - COM-Ports der per USB angeschlossenen "Datensammler-Calliopes" herausfinden
 
