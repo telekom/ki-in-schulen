@@ -51,7 +51,7 @@ Die folgenden Kanäle sind verfügbar für Diskussionen, Feedback und Unterstüt
 | **Github Issues**   | <a href="https://github.com/telekom/ki-in-schulen/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/github/issues/telekom/ki-in-schulen?style=flat-square"></a> </a>   |
 | **Andere Anfragen**    | <a href="mailto:opensource@telekom.de" title="Email Open Source Team"><img src="https://img.shields.io/badge/email-Open%20Source%20Team-green?logo=mail.ru&style=flat-square&logoColor=white"></a>   |
 
-Zusätzlich stehen folgende Kommunikationskanäle zur Kontaktaufnahme mit dem Projektteam zur Verfügung:
+Zusätzlich stehen folgende Kommunikationskanäle zur Kontaktaufnahme mit dem Projektteam via Projektleiter Christian Schiller zur Verfügung:
 
 * Github: https://www.github.com/c-a-schiller
 * Twitter: https://www.twitter.com/c_a_schiller
