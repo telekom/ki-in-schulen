@@ -3,8 +3,8 @@
 Dieses Projekt nutzt ganz oder in Teilen folgende Third Party Software
 
 * Programmiersprache Microsoft Makecode für Calliope mini https://www.microsoft.com/makecode
+* Programmiersprache NEPO für Calliope mini https://www.open-roberta.org/
 * Neural Network Implementierung für Calliope mini https://www.github.com/telekom/pxt-ki-in-schulen
-* Programmiersprache NEPO für Calliope mini https://lab.open-roberta.org/
 * Programmiersprache Python https://www.python.org
 * Scikit-Learn https://scikit-learn.org/stable/
 * Pygame https://www.pygame.org/news

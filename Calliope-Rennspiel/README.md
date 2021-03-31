@@ -16,6 +16,8 @@ Daher eignet sich das Szenario "Autonomes Fahren" ganz besonders für einen KI-W
 
 SuS bringen in einem Workshop einem “autonomen Auto” das selbständige (autonome) Fahren bei, indem sie einen Calliope “künstlich intelligent” machen, sodass er autonom Hindernissen auf der Straße ausweichen kann. Dies zur Erhöhung der Motivation durch „Gamification"-Elemente.
 
+![Autonomes Fahren Calliope Mini](./intro.png)
+
 ## Dokumentation
 
 Um die Durchführung eines solchen Workshops an Schulen zu unterstützen, stellen wir folgende Dokumentation bereit:
@@ -43,4 +45,4 @@ Das Telekom Open Source Github Projekt https://github.com/telekom/pxt-ki-in-schu
 
 Projektziel ist es, die "Hirntransplantation" eines trainierten KI-Modells für die SuS über die Oberfläche auf https://makecode.calliope.cc nachvollziehbar zu machen; Stand März 2021 verhinderte jedoch ein Bug in Makecode diese Variante.
 
-Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert, der in den Nutzeranleitungen entsprecht referenziert ist.
+Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert, der in den Nutzeranleitungen entsprechend referenziert ist.

@@ -20,23 +20,23 @@
 
 Im Rahmen der __Deutsche Telekom IT@School Initiative__ engagieren sich Mitarbeiter der Deutschen Telekom ehrenamtlich darin, MINT-Bildung an Schulen zu fördern. Eine Gesamtübersicht aller Projekte dieser Gemeinschaft findet sich hier: https://digitale-schule.jetzt/
 
-Aus dieser Gemeinschaft heraus hat sich Ende 2019 das erste Projekt "__Autonomes Fahren mit dem Calliope mini__" entwickelt und wurde 2020 umgesetzt, um an Schulen speziell die Kompetenz für das Zukunftsthema __Künstliche Intelligenz__ zu stärken.
+Aus dieser Gemeinschaft heraus hat sich Ende 2019 das erste Projekt "__Autonomes Fahren mit dem Calliope mini__" entwickelt und wurde 2020-21 umgesetzt, um an Schulen speziell die Kompetenz für das Zukunftsthema __Künstliche Intelligenz__ zu stärken.
 
-Künstliche Intelligenz (KI), und damit das Maschinelle Lernen (ML), sind ein Megatrend in der IT. Selbst wenn der aktuelle Hype um das Thema KI vorübergezogen sein wird, wird ML-basierende Software mehr und mehr die "klassische" Software ergänzen und ersetzen. Oder, um mit Andrej Karpathy (leitender KI-Ingenieur von Tesla) zu sprechen: "Software 2.0 will eat Software 1.0".
+Künstliche Intelligenz (KI), und damit das Maschinelle Lernen (ML), sind ein Megatrend in der IT. Selbst wenn der aktuelle Hype um das Thema KI vorübergezogen sein wird, wird ML-basierende Software mehr und mehr die "klassische" Software ergänzen und ersetzen. Oder, um mit Andrej Karpathy (leitender KI-Ingenieur von Tesla) zu sprechen: " (Software 2.0 will eat Software 1.0)[https://karpathy.medium.com/software-2-0-a64152b37c35] ".
 
 Die heutige digitale Jugend - eigenes Smartphone schon mit 10 Jahren oder gar früher - ist schon sehr früh mit "Alltags-KI/ML" konfrontiert. SocialMedia- und Nachrichten-Newsfeeds, Produktempfehlungen, Internetsuche, Gesichts- und Objekterkennung in Fotoalben, Sprachassistenten wie Siri, Alexa oder Google Assistant, Navigation, Augmented-Reality-Spiele-Apps, Haushaltsroboter, ... Und mit viel Glück sieht man auch in Deutschland sogar mal ein autonom fahrendes Auto als Prototyp herumfahren, den Megatrend im Bereich Mobilität, der sich in großen Teilen auch auf KI/ML stützt.
 
-### KI-Leitlinien der Deutschen telekom
+### KI-Leitlinien der Deutschen Telekom
 
-Künstliche Intelligenz (KI) braucht einen Rahmen. Mit unseren [neun selbst-bindenden Leitlinien](https://www.telekom.com/de/konzern/digitale-verantwortung/details/ki-leitlinien-der-telekom-523904) haben wir diesen Rahmen definiert.
+Künstliche Intelligenz (KI) braucht einen Rahmen. Mit den [neun selbst-bindenden Leitlinien](https://www.telekom.com/de/konzern/digitale-verantwortung/details/ki-leitlinien-der-telekom-523904) hat die Deutsche Telekom einen solchen Rahmen definiert.
 
-Sie beschreiben, wie wir als Deutsche Telekom mit KI umgehen wollen und wie wir unsere auf KI basierenden Produkte und Services künftig entwickeln. Der Grundgedanke ist, dass KI erstmal nur ein Werkzeug und an sich neutral ist. Es liegt also an uns, sie positiv einzusetzen ohne dabei die Risiken auszublenden und verantwortungsbewusst mit diesen umzugehen.
+Sie beschreiben, wie die Deutsche Telekom mit KI umgehen möchte und auf KI basierende Produkte und Services künftig entwickelt werden sollten. Der Grundgedanke ist, dass KI erstmal nur ein Werkzeug und an sich neutral ist. Es gilt, sie wertschöpfend einzusetzen ohne dabei die Risiken auszublenden und verantwortungsbewusst mit diesen umzugehen.
 
 Das Projekt AI@School läuft unter __Leitlinie 9 - Wir teilen und erklären. Wir wollen das Wissen und die technischen Kompetenzen über KI erhöhen und zugänglich machen.__
 
 ## Projektliste
 
-Derzeit gibt es im Rahmen der __AI@School Initiative__ folgende Projekte, mit denen wir als Deutsche Telekom unterstützen, Künstliche Intelligenz im Unterricht für Schüler und Schülerinnen spielerisch erleb- und erlernbar zu machen.
+Derzeit gibt es im Rahmen der __AI@School Initiative__ folgende Projekte, mit denen die Mitarbeiter der Deutschen Telekom unterstützen, Künstliche Intelligenz im Unterricht für Schüler und Schülerinnen spielerisch erleb- und erlernbar zu machen.
 
 1. [Autonomes Fahren mit dem Calliope mini](./Calliope-Rennspiel/)
 
@@ -52,9 +52,12 @@ Die folgenden Kanäle sind verfügbar für Diskussionen, Feedback und Unterstüt
 | **Andere Anfragen**    | <a href="mailto:opensource@telekom.de" title="Email Open Source Team"><img src="https://img.shields.io/badge/email-Open%20Source%20Team-green?logo=mail.ru&style=flat-square&logoColor=white"></a>   |
 
 Zusätzlich stehen folgende Kommunikationskanäle zur Kontaktaufnahme mit dem Projektteam zur Verfügung:
-* Email: mailto:christian.schiller@telekom.de
+
+* Github: https://www.github.com/c-a-schiller
 * Twitter: https://www.twitter.com/c_a_schiller
 * Instagram: https://www.instagram.com/c_a_schiller
+* LinkedIn: https://www.linkedin.com/in/christianschiller/
+* Email: mailto:christian.schiller@telekom.de
 
 ## Mitmachen
 
@@ -77,7 +80,7 @@ Unser Engagement für Open Source bedeutet, dass wir allen interessierten Partei
 ## Lizenzierung
 
 Copyright (c) 2021 Deutsche Telekom AG.  
-Copyright (c) 2021 Fraunhofer (für OpenRoberta Beiträge)
+Copyright (c) 2021 Fraunhofer IAIS (für Open Roberta Beiträge)
 
 The documentation is licensed under __[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de)__.
 
