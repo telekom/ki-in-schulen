@@ -30,7 +30,7 @@ Die heutige digitale Jugend - eigenes Smartphone schon mit 10 Jahren oder gar fr
 
 Künstliche Intelligenz (KI) braucht einen Rahmen. Mit den [neun selbst-bindenden Leitlinien](https://www.telekom.com/de/konzern/digitale-verantwortung/details/ki-leitlinien-der-telekom-523904) hat die Deutsche Telekom einen solchen Rahmen definiert.
 
-Sie beschreiben, wie die Deutsche Telekom mit KI umgehen möchte und auf KI basierende Produkte und Services künftig entwickelt werden sollten. Der Grundgedanke ist, dass KI erstmal nur ein Werkzeug und an sich neutral ist. Es gilt, sie wertschöpfend einzusetzen ohne dabei die Risiken auszublenden und verantwortungsbewusst mit diesen umzugehen.
+Sie beschreiben, wie die Deutsche Telekom mit KI umgehen möchte und auf KI basierende Produkte und Services künftig entwickelt werden sollten. Der Grundgedanke ist, dass KI erstmal nur ein Werkzeug und an sich neutral ist. Es gilt, sie wertschöpfend einzusetzen ohne dabei die Risiken auszublenden, und verantwortungsbewusst mit dem Werkzeug umzugehen.
 
 Das Projekt AI@School läuft unter __Leitlinie 9 - Wir teilen und erklären. Wir wollen das Wissen und die technischen Kompetenzen über KI erhöhen und zugänglich machen.__
 
