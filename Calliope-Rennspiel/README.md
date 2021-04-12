@@ -14,9 +14,9 @@ Jeder kennt Autos. Viele Schülerinnen und Schüler (SuS) spielen Autorennen, ob
 
 Daher eignet sich das Szenario "Autonomes Fahren" ganz besonders für einen KI-Workshop für SuS, eben weil es so intuitiv vermittelbar ist. Daran knüpft sich nämlich für die SuS automatisch die Frage, wie denn das "Computerhirn" des autonomen Autos lernt, gut Auto zu fahren? Ein Mensch geht in die Fahrschule... Aber was macht das autonome Auto? Hier setzt der Workshop an.
 
-SuS bringen in einem Workshop einem “autonomen Auto” das selbständige (autonome) Fahren bei, indem sie einen Calliope “künstlich intelligent” machen, sodass er autonom Hindernissen auf der Straße ausweichen kann. Dies zur Erhöhung der Motivation durch „Gamification"-Elemente. 
+SuS bringen in einem Workshop einem “autonomen Auto” das selbständige (autonome) Fahren bei, indem sie einen Calliope “künstlich intelligent” machen, sodass er autonom Hindernissen auf der Straße ausweichen kann. Dies zur Erhöhung der Motivation durch „Gamification"-Elemente.
 
-![Autonomes Fahren Calliope mini](./intro.png){:width="550px"}
+![Autonomes Fahren Calliope mini](./intro.png =550x)
 
 ## Dokumentation
 
