@@ -16,7 +16,7 @@ Daher eignet sich das Szenario "Autonomes Fahren" ganz besonders für einen KI-W
 
 SuS bringen in einem Workshop einem “autonomen Auto” das selbständige (autonome) Fahren bei, indem sie einen Calliope “künstlich intelligent” machen, sodass er autonom Hindernissen auf der Straße ausweichen kann. Dies zur Erhöhung der Motivation durch „Gamification"-Elemente.
 
-![Autonomes Fahren Calliope mini](./intro.png)
+![Autonomes Fahren Calliope mini](./intro.png){:width="550px"}
 
 ## Dokumentation
 
