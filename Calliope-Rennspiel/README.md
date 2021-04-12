@@ -16,7 +16,7 @@ Daher eignet sich das Szenario "Autonomes Fahren" ganz besonders für einen KI-W
 
 SuS bringen in einem Workshop einem “autonomen Auto” das selbständige (autonome) Fahren bei, indem sie einen Calliope “künstlich intelligent” machen, sodass er autonom Hindernissen auf der Straße ausweichen kann. Dies zur Erhöhung der Motivation durch „Gamification"-Elemente.
 
-![Autonomes Fahren Calliope Mini](./intro.png)
+![Autonomes Fahren Calliope mini](./intro.png)
 
 ## Dokumentation
 
@@ -28,14 +28,18 @@ Um die Durchführung eines solchen Workshops an Schulen zu unterstützen, stelle
 
 Folgendes Vorgehen bei der Einarbeitung in das Projekt ist empfohlen:
 
-1. Die an Lehrkräfte adressierte Dokumentation durchlesen, um einen Überblick zu erhalten, wie die verschiedenen Softwarekomponenten zusammenhängen und welche Möglichkeiten bestehen, die Elemente in einem Informatik-Curriculum zu nutzen
-2. Der Installationsanleitung folgen und einen Rechner "fit" machen für die Projektsoftware (alles ist Python-basiert)
-3. Der Nutzungsanleitung folgen, um einen Calliope Mini künstlich intelligent zu machen.
+1. Die an Lehrkräfte adressierte Präsentation (ODP & PDF verfügbar) durchlesen, um einen Überblick zu erhalten, wie die verschiedenen Softwarekomponenten zusammenhängen und welche Möglichkeiten bestehen, die Elemente in einem Informatik-Curriculum zu nutzen
+2. Der Installationsanleitung folgen und einen oder mehrere Schul-Rechner "fit" machen für die Projektsoftware (alles ist Python-basiert)
+3. Der Nutzungsanleitung folgen, um einen Calliope mini künstlich intelligent zu machen.
 
 Ergänzende Schritte
 
-4. Die an SuS adressierte Dokumentation ermöglicht einen SuS-gerechten Einstieg in das Thema "Künstliche Intelligenz" mit einer Überleitung in das KI-Szenario dieses Projektes (Autonomes Fahren)
+4. Die an SuS adressierte Präsentation (ODP & PDF verfügbar) ermöglicht einen SuS-gerechten Einstieg in das Thema "Künstliche Intelligenz" mit einer Überleitung in das KI-Szenario dieses Projektes (Autonomes Fahren)
 5. Die Expertenversion des Projektes - empfohlen für Oberstufe - ermöglicht die vergleichende Betrachtung verschiedener Algorithmen im Bereich Künstliche Intelligenz
+
+Folgende Übersicht fasst den Projektablauf & Projektvarianten übersichtlich zusammen:
+
+![Übersicht](./uebersicht.png)
 
 ### Erläuterung zum Projekt "pxt-ki-in-schulen"
 
@@ -43,6 +47,6 @@ Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope Mini geteste
 
 Das Telekom Open Source Github Projekt https://github.com/telekom/pxt-ki-in-schulen gehört ebenfalls zum Calliope-Rennspiel-Projekt. Es stellt für Calliope Makecode "Bausteine" zur Nutzung eines künstlichen neuronalen Netzes auf einem Calliope Mini bereit (Implementierung einer schlanken Version künstlicher neuronaler Netze für den Calliope Mini).
 
-Projektziel ist es, die "Hirntransplantation" eines trainierten KI-Modells für die SuS über die Oberfläche auf https://makecode.calliope.cc nachvollziehbar zu machen; Stand März 2021 verhinderte jedoch ein Bug in Makecode diese Variante.
+Projektziel ist es, die "Hirntransplantation" ;-) eines trainierten KI-Modells für die SuS über die Oberfläche auf https://makecode.calliope.cc nachvollziehbar zu machen; Stand März 2021 verhinderte jedoch ein Bug in Makecode diese Variante.
 
 Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert, der in den Nutzeranleitungen entsprechend referenziert ist.
