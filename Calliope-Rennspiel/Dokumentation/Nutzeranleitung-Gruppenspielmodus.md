@@ -13,6 +13,14 @@ Pro Schülergruppe wird 1 "Datensammler-Calliope" benötigt, zu dem mehrere "Ren
 
 ![Gruppenspielmodus](./gruppenspiel.png)
 
+#### GUI (Grafische Nutzeroberfläche)
+
+Seit Release "Speedy" (19.12.2022) können die Schritte 1 bis 6A statt manuell bzw. via Kommandozeile auch via einer komfortablen grafischen Nutzeroberfläche (GUI) durchgeführt werden (Stand 19.12.2022 nur für Windows verfügbar).
+
+Dazu im Unterverzeichnis `/ki-in-schulen-master/Calliope-Rennspiel/Python/` folgenden Befehl ausführen: `python ki-gui-win.py`
+
+Die unten beschriebenen Schritte sind dann entsprechend über die Menüpunkte des erscheinenden Fenster nutzbar.
+
 #### Schritt 1 - Rennspiel auf den Calliope Minis der Schüler installieren
 
 Diesen Schritt mit angepasster Funkgruppe (__funkgruppe1__, __funkgruppe2__, ...) wiederholen, bis alle "Rennspiel-Calliopes" für alle Schüler aller Schülergruppen installiert sind.

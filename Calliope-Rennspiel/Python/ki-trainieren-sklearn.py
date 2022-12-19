@@ -1,7 +1,8 @@
 #
 # ki-trainieren-sklearn.py$
 #
-# (C) 2020, Christian A. Schiller, Deutsche Telekom AG
+# (C) 2020-2022, Christian A. Schiller, Deutsche Telekom AG
+#     Diese Version: V2 vom 19.12.2022 auf Basis Workshoperfahrungen 2022
 #
 # Deutsche Telekom AG and all other contributors /
 # copyright owners license this file to you under the
@@ -68,7 +69,7 @@ if len(sys.argv)<2:
 # Laden der Rohdaten (Terminal-Output als CSV-Datei)
 filename_raw = sys.argv[1]
 
-# Festelegen der Hidden Layer Size
+# Festlegen der Hidden Layer Size
 try:
     hidden_layers_raw = sys.argv[2]
     try:
@@ -82,6 +83,15 @@ if len(hidden_layers)>3 or len(hidden_layers)<1:
     raise SystemExit("Nicht unterstützte Anzahl von Hidden Layers. Programm wird beendet.")
 hidden_layers = list(map(int, hidden_layers))
 print("Hidden Layers:",hidden_layers)
+
+# Timestamp erzeugen
+stamp = strftime("%Y%m%d%H%M%S", gmtime())
+
+# Festlegen der Ausgabedatei (ohne Endung)
+try:
+    outputfilebase = sys.argv[3]
+except:
+    outputfilebase = './modelle/sklearn-py-modell-'+stamp
 
 df_raw = pd.read_csv(filename_raw)
 Xr = df_raw[['PlayerPos','Car1Pos','Car2Pos','Car3Pos','Car4Pos','Car5Pos']].values
@@ -119,7 +129,7 @@ print("Erreichte Modellgenauigkeit (Testdaten)     : ",mlp.score(Xt,yt))
 stamp = strftime("%Y%m%d%H%M%S", gmtime())
 
 # Speichern des Modells (Pickle-Format zur Nutzung im Python-Rennspiel)
-filename = './modelle/sklearn-py-modell-'+stamp+'.pkcls'
+filename = outputfilebase + '.pkcls'
 mlp_file = open(filename, 'wb')
 pickle.dump(mlp, mlp_file)
 print("Pickle-Datei des trainierten ML-Modells gespeichert.")
@@ -143,7 +153,7 @@ data['intercepts'] = []
 for item in mlp.intercepts_:
     data['intercepts'].append(item.tolist())
 
-filename = './modelle/sklearn-py-modell-'+stamp+'.json'
+filename = outputfilebase + '.json'
 
 def round_floats(o):
     if isinstance(o, float): return round(o, 6)

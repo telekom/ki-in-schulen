@@ -20,6 +20,15 @@ Pro Schüler wird 1 "Rennspiel-Calliope" benötigt, der direkt per USB an den Re
 
 ![Einzelspielmodus Basisversion](./einzelspiel-basis.png)
 
+#### GUI (Grafische Nutzeroberfläche)
+
+Seit Release "Speedy" (19.12.2022) können die Schritte 1 bis 5A statt manuell bzw. via Kommandozeile
+auch via einer komfortablen grafischen Nutzeroberfläche (GUI) durchgeführt werden (Stand 19.12.2022 nur für Windows verfügbar)
+
+Dazu im Unterverzeichnis `/ki-in-schulen-master/Calliope-Rennspiel/Python/` folgenden Befehl ausführen: `python ki-gui-win.py`
+
+Die unten beschriebenen Schritte sind dann entsprechend über die Menüpunkte des erscheinenden Fenster nutzbar.
+
 #### Schritt 1 - Rennspiel installieren
 
 Diesen Schritt muss jeder Schüler durchführen.

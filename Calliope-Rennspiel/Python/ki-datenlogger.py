@@ -1,7 +1,8 @@
 #
 # ki-datenlogger.py$
 #
-# (C) 2020, Christian A. Schiller, Deutsche Telekom AG
+# (C) 2020-2022, Christian A. Schiller, Deutsche Telekom AG
+#     Diese Version: V2 vom 19.12.2022 auf Basis Workshoperfahrungen 2022
 #
 # Deutsche Telekom AG and all other contributors /
 # copyright owners license this file to you under the
@@ -121,6 +122,12 @@ print(collect)
 
 # Speichern der gesammelten Daten in CSV-Datei
 stamp = strftime("%Y%m%d%H%M%S", gmtime())
-file = './csv-rohdaten/ki-rennspiel-log-'+stamp+'.csv'
+
+# Festlegen der Ausgabedatei (ohne Endung)
+try:
+    file = sys.argv[2]
+except:
+    file = './csv-rohdaten/ki-rennspiel-log-'+stamp+'.csv'
+
 print("Trainingsdaten gespeichert in Datei: "+file)
 collect.to_csv(file,index=False)
