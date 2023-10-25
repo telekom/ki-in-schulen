@@ -33,15 +33,15 @@ Die unten beschriebenen Schritte sind dann entsprechend über die Menüpunkte de
 
 Diesen Schritt muss jeder Schüler durchführen.
 
-Hierzu muss ein Calliope Mini per USB an den Schülerrechner angeschlossen werden.
+Hierzu muss ein Calliope mini per USB an den Schülerrechner angeschlossen werden.
 
 *MakeCode-Variante*
 
-* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/rennspiel-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe ist im Einzelspielmodus egal, da die Datensammlung über USB funktioniert)
+* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/Makecode/rennspiel-funkgruppe1-makecode.hex` auf den per USB angeschlossenen Calliope mini kopieren. (Die Funkgruppe ist im Einzelspielmodus egal, da die Datensammlung über USB funktioniert)
 
 *OpenRoberta-Variante*
 
-* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/rennspiel-openroberta.hex` auf den per USB angeschlossenen Calliope Mini kopieren. (Die Funkgruppe __muss__ beim Start auf __0__ gewählt bleiben, damit das USB-Logging aktiv ist)
+* Die Datei `/ki-in-schulen-master/Calliope-Rennspiel/OpenRoberta/rennspiel-openroberta.hex` auf den per USB angeschlossenen Calliope mini kopieren. (Die Funkgruppe __muss__ beim Start auf __0__ gewählt bleiben, damit das USB-Logging aktiv ist)
 
 #### Schritt 2 - COM-Port des per USB angeschlossenen "Rennspiel-Calliopes" herausfinden
 
@@ -49,7 +49,7 @@ Hierzu muss ein Calliope Mini per USB an den Schülerrechner angeschlossen werde
 
 * Linux: `ls -al /dev/ttyACM*`
 
-  ggf. Nutzer zur `dialout` Nutzergruppe hinzufügen, damit dieser auf den Calliope Mini auch zugreifen darf.
+  ggf. Nutzer zur `dialout` Nutzergruppe hinzufügen, damit dieser auf den Calliope mini auch zugreifen darf.
 
   `sudo usermod -aG <username> dialout`
 
@@ -87,9 +87,9 @@ Hierzu muss ein Calliope Mini per USB an den Schülerrechner angeschlossen werde
   * 50 Episoden werden durch die KI gespielt
   * Medianwert der erreichten Punktzahl wird angezeigt.
 
-*Variante B: IQ-Test auf Calliope Mini*
+*Variante B: IQ-Test auf Calliope mini*
 
-Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope Mini getestet werden.
+Das trainierte neuronale Netzwerk kann auch direkt auf dem Calliope mini getestet werden.
 
 Projektziel ist es, die "Hirntransplantation" des trainierten KI-Modells für die SuS über die Oberfläche auf https://makecode.calliope.cc nachvollziehbar zu machen; Stand März 2021 verhinderte jedoch ein Bug in Makecode diese Variante.
 
@@ -97,5 +97,5 @@ Daher wurde im Projekt ein temporärer Behelfsmechanismus implementiert:
 
 * Auf dem Schülergruppenrechner ins Verzeichnis wechseln: `ki-in-schulen-master/Calliope-Rennspiel/Python/iq-test-calliope/`
 * Auf dem Schülergruppenrechner ausführen: `python iq-test-erstellen.py -r <JSON-Modelldatei>` (Die JSON-Modelldatei ist eine in Schritt 4 erzeugte Modelldatei, bspw. `sklearn-py-modell-20210302220807.json`)
-* Die erzeugte Calliope Hex-Datei `iq-test-calliope.hex` kann auf einen Calliope Mini kopiert werden
+* Die erzeugte Calliope Hex-Datei `iq-test-calliope.hex` kann auf einen Calliope mini kopiert werden
 * Die trainierte KI übernimmt die Steuerung im Rennspiel (manuelle Steuerung ist zusätzlich möglich)

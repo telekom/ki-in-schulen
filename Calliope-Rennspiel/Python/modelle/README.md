@@ -25,7 +25,7 @@ Für das `ki-rennspiel.py` mit Backend-Option `orange3` stehen folgende Dateien 
   * Erreichte Modellgenauigkeit (Trainingsdaten): 0.908
   * Erreichte Modellgenauigkeit (Testdaten)     : 0.801
 
-### Vortrainierte Modelle für IQ-Test auf dem Calliope Mini (Projektvariante 1A)  
+### Vortrainierte Modelle für IQ-Test auf dem Calliope mini (Projektvariante 1A)  
 
   * `sklearn-py-modell-20210302220807.json`
     * Erreichte Modellgenauigkeit (Trainingsdaten):  0.8348560354374308

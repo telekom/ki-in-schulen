@@ -58,7 +58,7 @@ if len(sys.argv)<2:
     print('Folgende Dateien werden erzeugt:')
     print('     (1) Das trainierte ML-Modell als Pickle-Datei zur Nutzung mit ki-rennspiel.py:')
     print('     ./modelle/sklearn-py-modell-<ZEITSTEMPEL>.pkcls')
-    print('     (2) Das trainierte ML-Modell als JSON-Datei zur Nutzung mit Calliope Mini:')
+    print('     (2) Das trainierte ML-Modell als JSON-Datei zur Nutzung mit Calliope mini:')
     print('     ./modelle/sklearn-py-modell-<ZEITSTEMPEL>.json')
     print("Nutzung:\n")
     print("python ./ki-trainieren-sklearn.py <Rohdaten> <HiddenLayer\n")
@@ -135,7 +135,7 @@ pickle.dump(mlp, mlp_file)
 print("Pickle-Datei des trainierten ML-Modells gespeichert.")
 print("Dateiname: "+filename)
 
-# Speichern des Modells (JSON-Format zur Nutzung auf Calliope Mini)
+# Speichern des Modells (JSON-Format zur Nutzung auf Calliope mini)
 
 jsonlayers = []
 jsonlayers.append(6) # input layers

@@ -79,7 +79,7 @@ pickle.dump(mlp, mlp_file)
 print("Pickle-Datei des trainierten ML-Modells gespeichert.")
 print("Dateiname: "+filename)
 
-# Speichern des Modells (JSON-Format zur Nutzung auf Calliope Mini)
+# Speichern des Modells (JSON-Format zur Nutzung auf Calliope mini)
 
 jsonlayers = []
 jsonlayers.append(6) # input layers

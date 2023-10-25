@@ -18,7 +18,7 @@
 
 ## Einleitung
 
-Im Rahmen der __Deutsche Telekom IT@School Initiative__ engagieren sich Mitarbeiter der Deutschen Telekom ehrenamtlich darin, MINT-Bildung an Schulen zu fördern. Eine Gesamtübersicht aller Projekte dieser Gemeinschaft findet sich hier: https://digitale-schule.jetzt/
+Im Rahmen der __Deutsche Telekom DigITal@School Initiative__ engagieren sich Mitarbeiter der Deutschen Telekom ehrenamtlich darin, MINT-Bildung an Schulen zu fördern. Die Homepages dieser Gemeinschaft finden sich hier: https://digitale-schule.jetzt/ und https://robotik4kids.de
 
 Aus dieser Gemeinschaft heraus hat sich Ende 2019 das erste Projekt "__Autonomes Fahren mit dem Calliope mini__" entwickelt und wurde 2020-21 umgesetzt, um an Schulen speziell die Kompetenz für das Zukunftsthema __Künstliche Intelligenz__ zu stärken.
 
@@ -53,11 +53,11 @@ Die folgenden Kanäle sind verfügbar für Diskussionen, Feedback und Unterstüt
 
 Zusätzlich stehen folgende Kommunikationskanäle zur Kontaktaufnahme mit dem Projektteam via Projektleiter Christian Schiller zur Verfügung:
 
+* Email: mailto:christian.schiller@telekom.de
 * Github: https://www.github.com/c-a-schiller
-* Twitter: https://www.twitter.com/c_a_schiller
+* Fediverse: https://mastodon.online/@c_a_schiller
 * Instagram: https://www.instagram.com/c_a_schiller
 * LinkedIn: https://www.linkedin.com/in/christianschiller/
-* Email: mailto:christian.schiller@telekom.de
 
 ## Mitmachen
 
@@ -79,8 +79,8 @@ Unser Engagement für Open Source bedeutet, dass wir allen interessierten Partei
 
 ## Lizenzierung
 
-Copyright (c) 2021 Deutsche Telekom AG.  
-Copyright (c) 2021 Fraunhofer IAIS (für Open Roberta Beiträge)
+Copyright (c) 2021-23 Deutsche Telekom AG.  
+Copyright (c) 2021-23 Fraunhofer IAIS (für Open Roberta Beiträge)
 
 The documentation is licensed under __[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de)__.
 

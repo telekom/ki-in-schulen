@@ -10,4 +10,4 @@ In diesem Verzeichnis sind die Calliope mini Codeanteile für Microsoft Makecode
     * funkgruppe1 ... funkgruppe5 sind vorkonfiguriert auf die entsprechenden Funkkanäle des Calliope
 * Verzeichnis `KI-Erweiterung`
   * siehe separate README.md
-  * Diese Dateien stellen den Entwicklungsstand für die Projektvarianten 1A und 2- "IQ-Test auf dem Calliope Mini" dar, die aktuell aufgrund eines Bugs in Makecode nicht fortgeführt werden kann.
+  * Diese Dateien stellen den Entwicklungsstand für die Projektvarianten 1A und 2- "IQ-Test auf dem Calliope mini" dar, die aktuell aufgrund eines Bugs in Makecode nicht fortgeführt werden kann.
