@@ -103,18 +103,16 @@ while True:
 	if line.startswith("P") or line.startswith("\x00") or line.startswith("R"):
 		print("Header erkannt - ignorieren")
 	else:
-		print("Nutzdaten erkannt - Übernahme in DataFrame")
-		if line[:1]=="":
+		if line[:1] == "":
 			print("Leerdaten erkannt - Überspringen")
 		else:
-			collect = collect.append({'PlayerPos': line[:1],
-									'Car1Pos': line[2:3],
-									'Car2Pos': line[4:5],
-									'Car3Pos': line[6:7],
-									'Car4Pos': line[8:9],
-									'Car5Pos': line[10:11],
-									'Action': line[12:13]},
-									ignore_index=True)
+			collect = pd.concat([collect, pd.DataFrame({'PlayerPos': [line[:1]],
+                                                        'Car1Pos': [line[2:3]],
+                                                        'Car2Pos': [line[4:5]],
+                                                        'Car3Pos': [line[6:7]],
+                                                        'Car4Pos': [line[8:9]],
+                                                        'Car5Pos': [line[10:11]],
+                                                        'Action': [line[12:13]]})], ignore_index=True)
 
 # Schließen der seriellen Schnittstelle und Ausgabe der gesammelten Daten
 ser.close()
