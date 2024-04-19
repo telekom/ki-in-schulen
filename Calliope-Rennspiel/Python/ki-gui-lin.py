@@ -95,7 +95,7 @@ dictConfig = configEinlesen()
 if (not dictConfig):
     # Default-Konfig
     dictConfig = {"PythonEXE": ".", "CalliKIDir": "/usr/local/share/ki-in-schulen/Calliope-Rennspiel",
-                  "COMPort": "/dev/ttypACM0", "Dateiname": "ki-rennspiel-mein-spiel"}
+                  "COMPort": "/dev/ttyACM0", "Dateiname": "ki-rennspiel-mein-spiel"}
 print("Einstellungen:")
 print(dictConfig["Dateiname"])
 print(dictConfig["PythonEXE"])
