@@ -1,7 +1,7 @@
 #
 # ki-gui-lin.py$
 #
-# (C) 2022-3, Arndt Baars, Christian A. Schiller, Deutsche Telekom AG
+# (C) 2022-4, Arndt Baars, Christian A. Schiller, Deutsche Telekom AG
 #
 # Deutsche Telekom AG and all other contributors /
 # copyright owners license this file to you under the
@@ -49,7 +49,7 @@
 ##########
 
 from tkinter import *
-from tkinter import simpledialog
+from tkinter import simpledialog, messagebox
 import sys
 import subprocess
 import serial.tools.list_ports
@@ -184,7 +184,13 @@ def ki_datenlogger():
         dictConfig["Dateiname"] = dateiname
     cmd = os.path.join(dictConfig["CalliKIDir"], 'Python', 'ki-datenlogger.py')
     outputfile = os.path.join('csv-rohdaten', dictConfig["Dateiname"] + '.csv')
-    subprocess.run([sys.executable, cmd, dictConfig["COMPort"], outputfile], check=True)
+
+    # Check, ob die Datei bereits existiert. Falls ja, dann eine Sicherheitsabfrage, sonst normal weiter.
+    if os.path.exists(outputfile):
+    	if messagebox.askyesno("Der Dateiname existiert bereits!", "Eine Datei mit diesem Namen existiert bereits! Soll die Datei überschrieben werden?"):
+            subprocess.run([sys.executable, cmd, dictConfig["COMPort"], outputfile], check=True)
+    else:
+        subprocess.run([sys.executable, cmd, dictConfig["COMPort"], outputfile], check=True)
 
 
 # ki-trainieren-sklearn.py
