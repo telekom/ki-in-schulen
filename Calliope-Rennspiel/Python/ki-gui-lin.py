@@ -76,7 +76,7 @@ def donothing():
 
 def configEinlesen():
     try:
-        f = open("ki-gui-win_conf.cfg", "rb")
+        f = open("ki-gui-lin_conf.cfg", "rb")
         dict = pickle.load(f)
         f.close()
         return dict
@@ -85,7 +85,7 @@ def configEinlesen():
 
 
 def configSpeichern(dict):
-    f = open("ki-gui-win_conf.cfg", "wb")
+    f = open("ki-gui-lin_conf.cfg", "wb")
     pickle.dump(dict, f)
     f.close()
 
