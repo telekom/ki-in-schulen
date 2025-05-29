@@ -73,12 +73,12 @@ filename_raw = sys.argv[1]
 try:
     hidden_layers_raw = sys.argv[2]
     try:
-        hidden_layers = hidden_layers_raw.split (",")
+        hidden_layers = hidden_layers_raw.split(",")
     except:
         raise SystemExit("Falsche Syntax für Hidden Layers. Programm wird beendet.")
 except:
     hidden_layers_raw = "7,7"
-    hidden_layers = hidden_layers_raw.split (",")
+    hidden_layers = hidden_layers_raw.split(",")
 if len(hidden_layers)>3 or len(hidden_layers)<1:
     raise SystemExit("Nicht unterstützte Anzahl von Hidden Layers. Programm wird beendet.")
 hidden_layers = list(map(int, hidden_layers))
@@ -93,8 +93,24 @@ try:
 except:
     outputfilebase = './modelle/sklearn-py-modell-'+stamp
 
-df_raw = pd.read_csv(filename_raw)
-Xr = df_raw[['PlayerPos','Car1Pos','Car2Pos','Car3Pos','Car4Pos','Car5Pos']].values
+# Robustes Einlesen der CSV-Datei: Fehlerhafte Zeilen überspringen
+try:
+    df_raw = pd.read_csv(filename_raw, on_bad_lines='skip')
+except TypeError:
+    # Für ältere pandas-Versionen
+    df_raw = pd.read_csv(filename_raw, error_bad_lines=False)
+
+# Entferne Zeilen mit nicht-numerischen Werten in den Eingabespalten
+input_cols = ['PlayerPos','Car1Pos','Car2Pos','Car3Pos','Car4Pos','Car5Pos']
+before = len(df_raw)
+df_raw = df_raw.dropna(subset=input_cols)
+for col in input_cols:
+    df_raw = df_raw[pd.to_numeric(df_raw[col], errors='coerce').notnull()]
+after = len(df_raw)
+if after < before:
+    print(f"Warnung: {before-after} fehlerhafte Zeilen wurden beim Einlesen entfernt.")
+
+Xr = df_raw[input_cols].values
 yr = df_raw['Action'].values
 
 print ("Rohdaten Liste der Aktionen (sollten nur x,A,B sein!): ",df_raw['Action'].unique())
