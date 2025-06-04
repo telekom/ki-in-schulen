@@ -21,10 +21,8 @@
 
 radio.onReceivedNumber(function (receivedNumber) {
     if (radio.receivedPacket(RadioPacketProperty.SignalStrength) != 0) {
-        if (radio.receivedPacket(RadioPacketProperty.SignalStrength) > -90) {
-            if (isConnected < 2) {
-                isConnected += 1
-            }
+        if (isConnected < 2) {
+            isConnected += 1
         }
     }
 })
@@ -80,6 +78,8 @@ function erzeugeTrainingsdatensatz () {
     Ausgabe_String = "" + Ausgabe_String + output
     radio.sendString(Ausgabe_String)
 }
+let score = 0
+let speedup = 0
 let Ausgabe_String = ""
 let snapshot: number[] = []
 let playerCar: game.LedSprite = null
@@ -96,7 +96,6 @@ isConnected = 0
 output = "x"
 let init = true
 let Funkgruppe = 1
-let speedup = 0
 basic.showNumber(Funkgruppe)
 while (init) {
     if (input.buttonIsPressed(Button.A)) {
@@ -112,7 +111,6 @@ while (init) {
 }
 radio.setTransmitPower(7)
 radio.setGroup(Funkgruppe)
-let score = 0
 car1 = game.createSprite(0, 0)
 car1.delete()
 car2 = game.createSprite(1, 0)
@@ -138,7 +136,7 @@ control.inBackground(function () {
 })
 control.inBackground(function () {
     while (true) {
-        if (isConnected) {
+        if (isConnected > 1) {
             basic.setLedColor(Colors.Blue)
         } else {
             basic.turnRgbLedOff()
@@ -178,6 +176,35 @@ control.inBackground(function () {
                 }
             } else {
                 car2.change(LedSpriteProperty.Y, 1)
+                basic.pause(500 - speedup)
+            }
+        }
+    }
+})
+control.inBackground(function () {
+    if (gameOn == true) {
+        basic.pause(Math.randomRange(0, 2500))
+        car4 = game.createSprite(3, 0)
+        basic.pause(500 - speedup)
+        while (gameOn == true) {
+            if (car4.get(LedSpriteProperty.Y) == 4) {
+                if (playerCar.isTouching(car4)) {
+                    gameOn = false
+                    images.iconImage(IconNames.Skull).showImage(0)
+                    basic.pause(1000)
+                    game.gameOver()
+                    basic.pause(1000)
+                    control.reset()
+                } else {
+                    score = score + 1
+                    game.setScore(score)
+                    car4.delete()
+                    basic.pause(Math.randomRange(0, 2500))
+                    car4 = game.createSprite(3, 0)
+                    basic.pause(500 - speedup)
+                }
+            } else {
+                car4.change(LedSpriteProperty.Y, 1)
                 basic.pause(500 - speedup)
             }
         }
@@ -263,35 +290,6 @@ control.inBackground(function () {
                 }
             } else {
                 car3.change(LedSpriteProperty.Y, 1)
-                basic.pause(500 - speedup)
-            }
-        }
-    }
-})
-control.inBackground(function () {
-    if (gameOn == true) {
-        basic.pause(Math.randomRange(0, 2500))
-        car4 = game.createSprite(3, 0)
-        basic.pause(500 - speedup)
-        while (gameOn == true) {
-            if (car4.get(LedSpriteProperty.Y) == 4) {
-                if (playerCar.isTouching(car4)) {
-                    gameOn = false
-                    images.iconImage(IconNames.Skull).showImage(0)
-                    basic.pause(1000)
-                    game.gameOver()
-                    basic.pause(1000)
-                    control.reset()
-                } else {
-                    score = score + 1
-                    game.setScore(score)
-                    car4.delete()
-                    basic.pause(Math.randomRange(0, 2500))
-                    car4 = game.createSprite(3, 0)
-                    basic.pause(500 - speedup)
-                }
-            } else {
-                car4.change(LedSpriteProperty.Y, 1)
                 basic.pause(500 - speedup)
             }
         }
