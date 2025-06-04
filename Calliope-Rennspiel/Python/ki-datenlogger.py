@@ -96,7 +96,6 @@ collect = pd.DataFrame(columns=['PlayerPos','Car1Pos','Car2Pos','Car3Pos','Car4P
 while True:
 	if keypress:
 		break
-
     line = ser.readline().decode("utf-8").strip().replace(" ", "")  # CRLF + spaces entfernen
     print(line)
 
@@ -114,7 +113,7 @@ while True:
             'Car4Pos': [line[8]],
             'Car5Pos': [line[10]],
             'Action': [line[12]]
-        })], ignore_index=True)
+            })], ignore_index=True)
 
 # Schließen der seriellen Schnittstelle und Ausgabe der gesammelten Daten
 ser.close()
