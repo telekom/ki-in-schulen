@@ -102,7 +102,7 @@ while True:
 	# Frühzeitiges Überspringen bei irrelevanten oder leeren Zeilen
 	if not line or line[0] in {"P", "\x00", "R"}:
 		print("Header oder leere Daten erkannt – Überspringen")
-	elif line[0] not in {"1", "2", "3", "4", "5"}:
+	elif line[0] not in {"0","1", "2", "3", "4", "5"}:
 		print("Nicht relevante Zeile erkannt – Überspringen")
 	else:
 		collect = pd.concat([collect, pd.DataFrame({
