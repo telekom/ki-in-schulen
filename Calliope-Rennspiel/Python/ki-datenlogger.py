@@ -58,31 +58,31 @@ from time import gmtime, strftime
 global keypress
 keypress = False
 def on_press(key):
-    global keypress
-    keypress = True
-    print("\nTastendruck erkannt! Beende Datensammlung und speichere CSV.")
-    print("Bitte ggf. nochmal Calliope resetten, um Vorgang abzuschließen.")
-    print("Oder 15 Sekunden warten, dann geschieht dies automatisch.")
+	global keypress
+	keypress = True
+	print("\nTastendruck erkannt! Beende Datensammlung und speichere CSV.")
+	print("Bitte ggf. nochmal Calliope resetten, um Vorgang abzuschließen.")
+	print("Oder 15 Sekunden warten, dann geschieht dies automatisch.")
 listener = keyboard.Listener(on_press=on_press)
 listener.start()
 
 # Info zur Nutzung ausgeben, falls keine Parameter übergeben
 if len(sys.argv)<2:
-    print("Calliope Rennspiel mit KI. Modul: Calliope Datenlogger\n")
-    print("Nutzung:\n")
-    print("python ki-datenlogger.py <COM-Port>\n")
-    print("     <COM-Port>: COM-Port des Calliope-Datensammlers")
-    print("                 Windows: z.B. COM3")
-    print("                 Linux  : z.B. /dev/ttyACM1  ")
-    print("\nErzeugt eine CSV-Datei mit Trainingsdaten für die weitere Nutzung mit ki-trainieren-sklearn.py")
-    print("an folgendem Ort: ./csv-rohdaten/ki-rennspiel-log-<ZEITSTEMPEL>.csv")
-    print("\nNach Start des Programms läuft die Datensammlung sofort und wartet auf Daten vom Calliope.")
-    print("Nach 15 Sekunden ohne Datenempfang endet die Datensammlung automatisch.")
-    print("Während der Datensammlung eine beliebige Taste drücken, um die")
-    print("Datensammlung zu beenden und die CSV-Datei zu erstellen.")
-    print("Bitte dann ggf. nochmal Calliope resetten, um Vorgang abzuschließen.")
-    print("Oder 15 Sekunden warten, dann geschieht dies automatisch.")
-    raise SystemExit()
+	print("Calliope Rennspiel mit KI. Modul: Calliope Datenlogger\n")
+	print("Nutzung:\n")
+	print("python ki-datenlogger.py <COM-Port>\n")
+	print("     <COM-Port>: COM-Port des Calliope-Datensammlers")
+	print("                 Windows: z.B. COM3")
+	print("                 Linux  : z.B. /dev/ttyACM1  ")
+	print("\nErzeugt eine CSV-Datei mit Trainingsdaten für die weitere Nutzung mit ki-trainieren-sklearn.py")
+	print("an folgendem Ort: ./csv-rohdaten/ki-rennspiel-log-<ZEITSTEMPEL>.csv")
+	print("\nNach Start des Programms läuft die Datensammlung sofort und wartet auf Daten vom Calliope.")
+	print("Nach 15 Sekunden ohne Datenempfang endet die Datensammlung automatisch.")
+	print("Während der Datensammlung eine beliebige Taste drücken, um die")
+	print("Datensammlung zu beenden und die CSV-Datei zu erstellen.")
+	print("Bitte dann ggf. nochmal Calliope resetten, um Vorgang abzuschließen.")
+	print("Oder 15 Sekunden warten, dann geschieht dies automatisch.")
+	raise SystemExit()
 
 # Initialisieren der seriellen Schnittstelle mit dem übergebenen Parameter
 print("Nutze COM-Port: ",sys.argv[1])
@@ -96,24 +96,24 @@ collect = pd.DataFrame(columns=['PlayerPos','Car1Pos','Car2Pos','Car3Pos','Car4P
 while True:
 	if keypress:
 		break
-    line = ser.readline().decode("utf-8").strip().replace(" ", "")  # CRLF + spaces entfernen
-    print(line)
+	line = ser.readline().decode("utf-8").strip().replace(" ", "")  # CRLF + spaces entfernen
+	print(line)
 
-    # Frühzeitiges Überspringen bei irrelevanten oder leeren Zeilen
-    if not line or line[0] in {"P", "\x00", "R"}:
-        print("Header oder leere Daten erkannt – Überspringen")
-    elif line[0] not in {"1", "2", "3", "4", "5"}:
-        print("Nicht relevante Zeile erkannt – Überspringen")
-    else:
-        collect = pd.concat([collect, pd.DataFrame({
-            'PlayerPos': [line[0]],
-            'Car1Pos': [line[2]],
-            'Car2Pos': [line[4]],
-            'Car3Pos': [line[6]],
-            'Car4Pos': [line[8]],
-            'Car5Pos': [line[10]],
-            'Action': [line[12]]
-            })], ignore_index=True)
+	# Frühzeitiges Überspringen bei irrelevanten oder leeren Zeilen
+	if not line or line[0] in {"P", "\x00", "R"}:
+		print("Header oder leere Daten erkannt – Überspringen")
+	elif line[0] not in {"1", "2", "3", "4", "5"}:
+		print("Nicht relevante Zeile erkannt – Überspringen")
+	else:
+		collect = pd.concat([collect, pd.DataFrame({
+			'PlayerPos': [line[0]],
+			'Car1Pos': [line[2]],
+			'Car2Pos': [line[4]],
+			'Car3Pos': [line[6]],
+			'Car4Pos': [line[8]],
+			'Car5Pos': [line[10]],
+			'Action': [line[12]]
+			})], ignore_index=True)
 
 # Schließen der seriellen Schnittstelle und Ausgabe der gesammelten Daten
 ser.close()
@@ -124,9 +124,9 @@ stamp = strftime("%Y%m%d%H%M%S", gmtime())
 
 # Festlegen der Ausgabedatei (ohne Endung)
 try:
-    file = sys.argv[2]
+	file = sys.argv[2]
 except:
-    file = './csv-rohdaten/ki-rennspiel-log-'+stamp+'.csv'
+	file = './csv-rohdaten/ki-rennspiel-log-'+stamp+'.csv'
 
 print("Trainingsdaten gespeichert in Datei: "+file)
 collect.to_csv(file,index=False)
