@@ -1,7 +1,7 @@
 #
 # ki-gui-lin.py$
 #
-# (C) 2022-4, Arndt Baars, Christian A. Schiller, Deutsche Telekom AG
+# (C) 2022-5, Arndt Baars, Christian A. Schiller, Deutsche Telekom AG
 #
 # Deutsche Telekom AG and all other contributors /
 # copyright owners license this file to you under the
@@ -44,7 +44,7 @@
 #    - Einfuegen einer Hilfe mit Verweisen auf die vorhandenen Präsentationen und Materialien.
 #   - Portierung für Linux und MacOS
 #
-# Version 0.22 (Stand: 07.03.2023)
+# Version 0.23 (Stand: 04.06.2025)
 #
 ##########
 
@@ -107,12 +107,12 @@ print("")
 # Kopiert die notwendigen Daten fuer einen Datensammler auf den Calliope.
 # Wenn keine Gruppe angegeben wird, dann wird der Datensammler von OpenRoberta genutzt.
 # Sonst wird der entsprechende Datensammler auf Basis von Makecode kopiert.
-def copyDatensammler(gruppe=0):
+def copyDatensammler(calliversion=0):
     src = None
-    if gruppe == 0:
+    if calliversion == 0:
         src = os.path.join(dictConfig["CalliKIDir"], 'OpenRoberta', 'datensammler-openroberta.hex')
     else:
-        src = os.path.join(dictConfig["CalliKIDir"], 'Makecode', 'datensammler-funkgruppe%d-makecode.hex' % gruppe)
+        src = os.path.join(dictConfig["CalliKIDir"], 'Makecode', 'datensammler-makecode-V%d.hex' % calliversion)
     dst = get_calliope_drive()
     if dst:
         cmd = 'cp %s %s' % (src, dst)
@@ -124,12 +124,12 @@ def copyDatensammler(gruppe=0):
 # Kopiert die notwendigen Daten fuer das Rennspiel auf den Calliope.
 # Wenn keine Gruppe angegeben wird, dann wird das Rennspiel von OpenRoberta genutzt.
 # Sonst wird das entsprechende Rennspiel auf Basis von Makecode kopiert.
-def copyRennspiel(gruppe=0):
+def copyRennspiel(calliversion=0):
     src = None
-    if gruppe == 0:
+    if calliversion == 0:
         src = os.path.join(dictConfig["CalliKIDir"], 'OpenRoberta', 'rennspiel-openroberta.hex')
     else:
-        src = os.path.join(dictConfig["CalliKIDir"], 'Makecode', 'rennspiel-funkgruppe%d-makecode.hex' % gruppe)
+        src = os.path.join(dictConfig["CalliKIDir"], 'Makecode', 'rennspiel-makecode-V%d.hex' % calliversion)
     dst = get_calliope_drive()
     if dst:
         cmd = 'cp %s %s' % (src, dst)
@@ -267,17 +267,13 @@ menubar.add_cascade(label="Datei", menu=dateimenu)
 
 # Calli-Menu
 callimenu = Menu(menubar, tearoff=0)
-callimenu.add_command(label="Datensammler kopieren", command=copyDatensammler)
-callimenu.add_command(label="Rennspiel kopieren", command=copyRennspiel)
+callimenu.add_command(label="OpenRoberta Datensammler kopieren", command=copyDatensammler)
+callimenu.add_command(label="OpenRoberta Rennspiel kopieren", command=copyRennspiel)
 callimenu.add_separator()
-callimenu.add_command(label="Makecode Datensammler kopieren Gruppe 1", command=lambda: copyDatensammler(1))
-callimenu.add_command(label="Makecode Datensammler kopieren Gruppe 2", command=lambda: copyDatensammler(2))
-callimenu.add_command(label="Makecode Datensammler kopieren Gruppe 3", command=lambda: copyDatensammler(3))
-callimenu.add_command(label="Makecode Datensammler kopieren Gruppe 4", command=lambda: copyDatensammler(4))
-callimenu.add_command(label="Makecode Rennspiel kopieren Gruppe 1", command=lambda: copyRennspiel(1))
-callimenu.add_command(label="Makecode Rennspiel kopieren Gruppe 2", command=lambda: copyRennspiel(2))
-callimenu.add_command(label="Makecode Rennspiel kopieren Gruppe 3", command=lambda: copyRennspiel(3))
-callimenu.add_command(label="Makecode Rennspiel kopieren Gruppe 4", command=lambda: copyRennspiel(4))
+callimenu.add_command(label="Makecode V1 Datensammler kopieren", command=lambda: copyDatensammler(1))
+callimenu.add_command(label="Makecode V2 Datensammler kopieren", command=lambda: copyDatensammler(2))
+callimenu.add_command(label="Makecode V1 Rennspiel kopieren", command=lambda: copyRennspiel(1))
+callimenu.add_command(label="Makecode V2 Rennspiel kopieren", command=lambda: copyRennspiel(2))
 menubar.add_cascade(label="Calli", menu=callimenu)
 
 # KI-Menu

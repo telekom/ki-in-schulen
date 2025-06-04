@@ -1,7 +1,7 @@
 /*
  * ki-in-schulen$
  *
- * (C) 2021, Christian A. Schiller, Ferenc Hechler, Mirko Jelinek, Dirk Wolters, Deutsche Telekom AG
+ * (C) 2021-25, Christian A. Schiller, Ferenc Hechler, Mirko Jelinek, Dirk Wolters, Deutsche Telekom AG
  *
  * Deutsche Telekom AG and all other contributors /
  * copyright owners license this file to you under the
@@ -17,6 +17,9 @@
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
+ *
+ * v20250604
+ *
  */
 
 radio.onReceivedString(function (receivedString) {
@@ -27,32 +30,51 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    if (!(gather_data)) {
-        serial.writeLine("PlayerPos,Car1Pos,Car2Pos,Car3Pos,Car4Pos,Car5Pos,Action")
-        gather_data = true
+    if (!(init)) {
+        if (!(gather_data)) {
+            serial.writeLine("PlayerPos,Car1Pos,Car2Pos,Car3Pos,Car4Pos,Car5Pos,Action")
+            gather_data = true
+        }
     }
 })
 let load = 0
-let gather_data = false
-radio.setGroup(1)
-radio.setTransmitPower(7)
-radio.setTransmitSerialNumber(false)
-gather_data = false
 let packetCount = 0
-let loadPoint = game.createSprite(0, 0)
-loadPoint.set(LedSpriteProperty.Brightness, 0)
-serial.writeLine("Datensammler - Funkgruppe 1")
-serial.writeLine("---------------------------")
-
+let loadPoint: game.LedSprite = null
+let gather_data = false
+let init = false
+init = true
+let Funkgruppe = 1
+basic.showNumber(Funkgruppe)
+gather_data = false
+while (init) {
+    if (input.buttonIsPressed(Button.A)) {
+        Funkgruppe += 1
+        if (Funkgruppe > 7) {
+            Funkgruppe = 1
+        }
+        basic.showNumber(Funkgruppe)
+    }
+    if (input.buttonIsPressed(Button.B)) {
+        radio.setGroup(Funkgruppe)
+        radio.setTransmitPower(7)
+        radio.setTransmitSerialNumber(false)
+        serial.writeLine("Datensammler - Funkgruppe:")
+        serial.writeLine("" + (Funkgruppe))
+        serial.writeLine("---------------------------")
+        loadPoint = game.createSprite(0, 0)
+        loadPoint.set(LedSpriteProperty.Brightness, 0)
+        init = false
+    }
+}
 control.inBackground(function () {
-    while (true) {
+    if (!(init)) {
         // sending ping
         radio.sendNumber(0)
         basic.pause(200)
     }
 })
 control.inBackground(function () {
-    while (true) {
+    if (!(init)) {
         basic.setLedColor(Colors.Off)
         if (!(gather_data)) {
             basic.showArrow(ArrowNames.East)
@@ -73,7 +95,7 @@ control.inBackground(function () {
     }
 })
 control.inBackground(function () {
-    while (true) {
+    if (!(init)) {
         load = packetCount
         packetCount = 0
         basic.pause(1000)
