@@ -96,23 +96,25 @@ collect = pd.DataFrame(columns=['PlayerPos','Car1Pos','Car2Pos','Car3Pos','Car4P
 while True:
 	if keypress:
 		break
-	line = ser.readline().decode("utf-8")
-	line = line[:-2] # CRLF entfernen
-	line = ''.join(line.split()) # Leerzeichen entfernen
-	print(line)
-	if line.startswith("P") or line.startswith("\x00") or line.startswith("R"):
-		print("Header erkannt - ignorieren")
-	else:
-		if line[:1] == "":
-			print("Leerdaten erkannt - Überspringen")
-		else:
-			collect = pd.concat([collect, pd.DataFrame({'PlayerPos': [line[:1]],
-                                                        'Car1Pos': [line[2:3]],
-                                                        'Car2Pos': [line[4:5]],
-                                                        'Car3Pos': [line[6:7]],
-                                                        'Car4Pos': [line[8:9]],
-                                                        'Car5Pos': [line[10:11]],
-                                                        'Action': [line[12:13]]})], ignore_index=True)
+
+    line = ser.readline().decode("utf-8").strip().replace(" ", "")  # CRLF + spaces entfernen
+    print(line)
+
+    # Frühzeitiges Überspringen bei irrelevanten oder leeren Zeilen
+    if not line or line[0] in {"P", "\x00", "R"}:
+        print("Header oder leere Daten erkannt – Überspringen")
+    elif line[0] not in {"1", "2", "3", "4", "5"}:
+        print("Nicht relevante Zeile erkannt – Überspringen")
+    else:
+        collect = pd.concat([collect, pd.DataFrame({
+            'PlayerPos': [line[0]],
+            'Car1Pos': [line[2]],
+            'Car2Pos': [line[4]],
+            'Car3Pos': [line[6]],
+            'Car4Pos': [line[8]],
+            'Car5Pos': [line[10]],
+            'Action': [line[12]]
+        })], ignore_index=True)
 
 # Schließen der seriellen Schnittstelle und Ausgabe der gesammelten Daten
 ser.close()
