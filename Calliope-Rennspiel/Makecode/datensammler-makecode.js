@@ -67,37 +67,43 @@ while (init) {
     }
 }
 control.inBackground(function () {
-    if (!(init)) {
-        // sending ping
-        radio.sendNumber(0)
-        basic.pause(200)
-    }
-})
-control.inBackground(function () {
-    if (!(init)) {
-        basic.setLedColor(Colors.Off)
-        if (!(gather_data)) {
-            basic.showArrow(ArrowNames.East)
-            basic.clearScreen()
-        } else {
-            if (load > 0) {
-                if (load > 5) {
-                    load = 5
-                }
-                loadPoint.set(LedSpriteProperty.X, load - 1)
-                loadPoint.set(LedSpriteProperty.Brightness, 255)
-            } else {
-                loadPoint.set(LedSpriteProperty.X, 0)
-                loadPoint.set(LedSpriteProperty.Brightness, 20)
-            }
+    while (true) {
+        if (!(init)) {
+            // sending ping
+            radio.sendNumber(0)
+            basic.pause(500)
         }
-        basic.pause(500)
     }
 })
 control.inBackground(function () {
-    if (!(init)) {
-        load = packetCount
-        packetCount = 0
-        basic.pause(1000)
+    while (true) {
+        if (!(init)) {
+            basic.setLedColor(Colors.Off)
+            if (!(gather_data)) {
+                basic.showArrow(ArrowNames.East)
+                basic.clearScreen()
+            } else {
+                if (load > 0) {
+                    if (load > 5) {
+                        load = 5
+                    }
+                    loadPoint.set(LedSpriteProperty.X, load - 1)
+                    loadPoint.set(LedSpriteProperty.Brightness, 255)
+                } else {
+                    loadPoint.set(LedSpriteProperty.X, 0)
+                    loadPoint.set(LedSpriteProperty.Brightness, 20)
+                }
+            }
+            basic.pause(500)
+        }
+    }
+})
+control.inBackground(function () {
+    while (true) {
+        if (!(init)) {
+            load = packetCount
+            packetCount = 0
+            basic.pause(1000)
+        }
     }
 })

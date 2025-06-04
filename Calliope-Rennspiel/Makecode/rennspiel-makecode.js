@@ -20,11 +20,7 @@
  */
 
 radio.onReceivedNumber(function (receivedNumber) {
-    if (radio.receivedPacket(RadioPacketProperty.SignalStrength) != 0) {
-        if (isConnected < 2) {
-            isConnected += 1
-        }
-    }
+    isConnected = 1
 })
 input.onButtonPressed(Button.A, function () {
     if (gameOn == true) {
@@ -69,6 +65,35 @@ function erzeugeSnapshot () {
         snapshot[5] = 0
     }
 }
+/**
+ * ki-in-schulen$
+ *
+ * (C) 2020-25, Christian A. Schiller, Ferenc Hechler, Mirko Jelinek, Dirk Wolters, Deutsche Telekom AG
+ *
+ * Deutsche Telekom AG and all other contributors /
+ *
+ * copyright owners license this file to you under the
+ *
+ * MIT License (the "License"); you may not use this
+ *
+ * file except in compliance with the License.
+ *
+ * You may obtain a copy of the License at
+ *
+ * https://opensource.org/licenses/MIT
+ *
+ * Unless required by applicable law or agreed to in writing,
+ *
+ * software distributed under the License is distributed on an
+ *
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *
+ * KIND, either express or implied.  See the License for the
+ *
+ * specific language governing permissions and limitations
+ *
+ * under the License.
+ */
 function erzeugeTrainingsdatensatz () {
     Ausgabe_String = ""
     erzeugeSnapshot()
@@ -91,6 +116,7 @@ let car1: game.LedSprite = null
 let output = ""
 let isConnected = 0
 let gameOn = false
+basic.setLedColor(0xff0000)
 gameOn = false
 isConnected = 0
 output = "x"
@@ -136,15 +162,13 @@ control.inBackground(function () {
 })
 control.inBackground(function () {
     while (true) {
-        if (isConnected > 1) {
+        if (isConnected == 1) {
             basic.setLedColor(Colors.Blue)
         } else {
             basic.turnRgbLedOff()
         }
-        if (isConnected > 0) {
-            isConnected += -1
-        }
-        basic.pause(500)
+        isConnected = 0
+        basic.pause(2000)
     }
 })
 control.inBackground(function () {
